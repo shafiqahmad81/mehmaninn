@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>otithee</title>
+
+</head>
+
+<body>
+  <header class="py-2.5 lg:py-0">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="flex flex-1 items-center">
+          <a href="#" class="w-full inline-block max-w-35">
+            <img class="hidden md:block" src="./assets/logo/logo.png" alt="logo">
+            <img class="md:hidden w-10 my-2" src="./assets/logo/tab-logo.png" alt="logo">
+          </a>
+          <ul class="hidden xl:flex flex-wrap items-center ">
+            <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Apartments</a>
+            </li>
+            <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Hotels</a>
+            </li>
+            <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Resorts</a>
+            </li>
+            <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Shared
+                Rooms</a></li>
+            <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Convention
+                Hall</a></li>
+            <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Transports</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center xl:gap-5">
+          <div class=" py-1.5 px-3">
+            <button class="flex justify-between items-center w-25.5 cursor-pointer">
+              <span class="w-full max-w-7.5"><img src="./assets/logo/US.svg" alt="us-logo"></span>
+              <span class="text-base font-medium leading-6 text-black">EN | BDT</span>
+            </button>
+          </div>
+          <div class="w-13 py-1.5 px-3">
+            <div class="relative ">
+              <button
+                class=" after:content-[''] after:inline-block after:ml-[0.255em] after:align-[0.255em] after:border-t-[4.8px] after:border-t-current after:border-r-[4.8px] after:border-r-transparent after:border-l-[4.8px] after:border-l-transparent after:border-b-0 after:absolute after:top-1 after:right-0 cursor-pointer">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="16"
+                  width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112v25.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V208c0-61.9 50.1-112 112-112zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="w-15 py-1.5 px-3">
+            <div class="relative ">
+              <button
+                class=" after:content-[''] after:inline-block after:ml-[0.255em] after:align-[0.255em] after:border-t-[4.8px] after:border-t-current after:border-r-[4.8px] after:border-r-transparent after:border-l-[4.8px] after:border-l-transparent after:border-b-0 after:absolute after:top-2 after:right-0 cursor-pointer">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" color="#000"
+                  height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 0, 0);">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM74.08,197.5a64,64,0,0,1,107.84,0,87.83,87.83,0,0,1-107.84,0ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120Zm97.76,66.41a79.66,79.66,0,0,0-36.06-28.75,48,48,0,1,0-59.4,0,79.66,79.66,0,0,0-36.06,28.75,88,88,0,1,1,131.52,0Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner section start -->
+  <section class="pt-50 pb-52.5 relative">
+    <div
+      class="absolute top-0 left-0 w-full h-full -z-10 after:content-[''] after:absolute after:z-10 after:top-0 after:left-0 after:bottom-0 after:w-full after:h-full after:bg-[linear-gradient(180deg,rgba(5,16,54,0.25)_0%,rgba(5,16,54,0.59)_72.43%)] after:opacity-[0.85] ">
+      <span class="w-full h-full inline-block text-transparent">
+        <img class="w-full h-full" src="./assets/logo/home-thumbnail.png" alt="home-thumbnail">
+      </span>
+    </div>
+    <div class="container">
+      <div class="">
+        <div class="flex items-center">
+          <div class="w-full max-w-[65%] mx-auto bg-white py-1.5 rounded-md shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]">
+            <div class="flex items-center justify-around">
+              <button
+                class="py-2.25 px-4 text-sm font-medium font-roboto inline-flex flex-col gap-1 items-center cursor-pointer text-black/60 transition-all hover:text-blue">
+                <span>
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="MuiTab-iconWrapper MuiTab-icon" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M1 11v10h5v-6h4v6h5V11L8 6z"></path>
+                    <path d="M10 3v1.97l7 5V11h2v2h-2v2h2v2h-2v4h6V3H10zm9 6h-2V7h2v2z"></path>
+                  </svg>
+                </span>
+                <span>Apartments</span>
+              </button>
+              <button
+                class="py-2.25 px-4 text-sm font-medium font-roboto inline-flex flex-col gap-1 items-center cursor-pointer text-black/60 transition-all hover:text-blue">
+                <span>
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="MuiTab-iconWrapper MuiTab-icon" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z">
+                    </path>
+                  </svg>
+                </span>
+                <span>Hotels</span>
+              </button>
+              <button
+                class="py-2.25 px-4 text-sm font-medium font-roboto inline-flex flex-col gap-1 items-center cursor-pointer text-black/60 transition-all hover:text-blue">
+                <span>
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="MuiTab-iconWrapper MuiTab-icon" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="m13.127 14.56 1.43-1.43 6.44 6.443L19.57 21zm4.293-5.73 2.86-2.86c-3.95-3.95-10.35-3.96-14.3-.02 3.93-1.3 8.31-.25 11.44 2.88zM5.95 5.98c-3.94 3.95-3.93 10.35.02 14.3l2.86-2.86C5.7 14.29 4.65 9.91 5.95 5.98zm.02-.02-.01.01c-.38 3.01 1.17 6.88 4.3 10.02l5.73-5.73c-3.13-3.13-7.01-4.68-10.02-4.3z">
+                    </path>
+                  </svg>
+                </span>
+                <span>Resorts</span>
+              </button>
+              <button
+                class="py-2.25 px-4 text-sm font-medium font-roboto inline-flex flex-col gap-1 items-center cursor-pointer text-black/60 transition-all hover:text-blue">
+                <span>
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="MuiTab-iconWrapper MuiTab-icon" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                    <path d="M16.5 12h-9c-.55 0-1 .45-1 1v1h11v-1c0-.55-.45-1-1-1zM7.25 8.5h4v2h-4zM12.75 8.5h4v2h-4z">
+                    </path>
+                    <path
+                      d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 15h-1.5v-1.5h-11V17H5v-3.83c0-.66.25-1.26.65-1.72V9c0-1.1.9-2 2-2H11c.37 0 .72.12 1 .32.28-.2.63-.32 1-.32h3.35c1.1 0 2 .9 2 2v2.45c.4.46.65 1.06.65 1.72V17z">
+                    </path>
+                  </svg>
+                </span>
+                <span>Shared Rooms</span>
+              </button>
+              <button
+                class="py-2.25 px-4 text-sm font-medium font-roboto inline-flex flex-col gap-1 items-center cursor-pointer text-black/60 transition-all hover:text-blue">
+                <span>
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="MuiTab-iconWrapper MuiTab-icon" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M7 21H3V8l13-5v7H7v11zm12-11c-1.1 0-2 .9-2 2H9v9h5v-5h2v5h5v-9c0-1.1-.9-2-2-2z"></path>
+                  </svg>
+                </span>
+                <span>Convention Hall</span>
+              </button>
+              <button
+                class="py-2.25 px-4 text-sm font-medium font-roboto inline-flex flex-col gap-1 items-center cursor-pointer text-black/60 transition-all hover:text-blue">
+                <span>
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="MuiTab-iconWrapper MuiTab-icon" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M20.57 10.66c-.14-.4-.52-.66-.97-.66h-7.19c-.46 0-.83.26-.98.66L10 14.77l.01 5.51c0 .38.31.72.69.72h.62c.38 0 .68-.38.68-.76V19h8v1.24c0 .38.31.76.69.76h.61c.38 0 .69-.34.69-.72l.01-1.37v-4.14l-1.43-4.11zm-8.16.34h7.19l1.03 3h-9.25l1.03-3zM12 17c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm8 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z">
+                    </path>
+                    <path d="M14 9h1V3H7v5H2v13h1V9h5V4h6z"></path>
+                    <path d="M5 11h2v2H5zM10 5h2v2h-2zM5 15h2v2H5zM5 19h2v2H5z"></path>
+                  </svg>
+                </span>
+                <span>Transports</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white py-5 px-2.5 rounded-md">
+          <div class="grid grid-cols-12 gap-5">
+            <div class="col-span-4 py-2.5">
+              <div class="w-full relative group">
+                <label for="location" class="bg-white absolute -top-3 left-2 px-2 z-20 font-roboto
+                          leading-6 text-black/60
+                          group-focus-within:text-blue-600
+                          transition-colors">
+                  Location
+                </label>
+
+                <div class="relative w-full">
+                  <select name="location" id="location" class="w-full appearance-none border border-gray-300 rounded-sm
+                            px-4 py-3 pr-10 text-sm font-semibold font-roboto text-black/80
+                            focus:outline-none focus:ring-1 focus:ring-blue-500
+                            focus:border-blue-500">
+                    <option>Dhaka</option>
+                    <option>Mymensingh</option>
+                    <option>Jamalpur</option>
+                  </select>
+
+                  <!-- Rotating icon -->
+                  <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2
+                            text-gray-500
+                            transition-transform duration-200
+                            group-focus-within:rotate-180
+                            group-focus-within:text-blue-600">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M7 10l5 5 5-5z"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-6 py-2.5">
+              <div class="w-full relative group">
+                <label for="location"
+                  class="bg-white absolute -top-3 left-2 px-2 z-20 font-roboto leading-6 text-black/60 group-focus-within:text-blue-600 transition-colors">
+                  Check In - Check Out
+                </label>
+
+                <div class="w-full max-w-md mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="checkin">
+                      Check In
+                    </label>
+                    <input type="date" id="checkin" name="checkin" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  </div>
+
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="checkout">
+                      Check Out
+                    </label>
+                    <input type="date" id="checkout" name="checkout" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-2 py-2.5">
+              <div class="w-full relative group">
+                <label for="location"
+                  class="bg-white absolute -top-3 left-2 px-2 z-20 font-roboto leading-6 text-black/60 group-focus-within:text-blue-600 transition-colors">
+                  Number of Bed
+                </label>
+
+                <div class="relative w-full">
+                  <select name="location" id="location"
+                    class="w-full appearance-none border border-gray-300 rounded-sm px-4 py-3 pr-10 text-sm font-semibold font-roboto text-black/80 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
+                    <option>1 Bed</option>
+                    <option>2 Bed</option>
+                    <option>3 Bed</option>
+                    <option>4 Bed</option>
+                    <option>5 Bed</option>
+                    <option>6 Bed</option>
+                  </select>
+
+                  <!-- Rotating icon -->
+                  <span
+                    class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 transition-transform duration-200 group-focus-within:rotate-180 group-focus-within:text-blue-600">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M7 10l5 5 5-5z"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Banner section end -->
+  <!-- Packages section start -->
+  <section class="packages pt-10 pb-10 md:pb-15 bg-[#E5F0FD]">
+    <div class="container">
+      <div class="flex items-center justify-between pb-5 md:pb-6">
+        <h2>Packages</h2>
+        <a href="#" class="text-base leading-7.5 transition-all hover:text-blue">See More</a>
+      </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white ml-10 rounded-lg cursor-grab">
+                <div class="flex gap-5 py-5">
+                  <div class="w-1/2 -ml-10">
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="./assets/logo/training-center.webp" alt="training-center">
+                    </div>
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-5">
+                    <div class="flex flex-col gap-1.5">
+                        <a href="#" class="text-sm font-raleway font-bold leading-4 text-title transition-all hover:text-blue">Entrepreneur Skill Enhancement Training: Unlock Your Potential</a>
+                      <div>
+                        <span class="bg-[#198754] text-[9px] font-raleway font-bold leading-2.25 px-1.5 py-0.75 text-white rounded-md">Affiliate</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <span class="text-sm font-raleway font-bold leading-4 text-title">Start From</span>
+                      <div class="flex text-lg font-roboto font-extrabold leading-4 text-title">
+                        <span>2,500</span>
+                        <span>৳</span>
+                      </div>
+                      <span class="text-xs font-raleway leading-6 font-normal text-title">*Price includes VAT & Tax</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-2 flex items-center justify-end">
+                  <a href="#" class="w-1/2 bg-[#3554d1] py-1.5 px-3 text-base leading-6 mt-2.5 text-center text-white rounded-md">Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white ml-10 rounded-lg cursor-grab">
+                <div class="flex gap-5 py-5">
+                  <div class="w-1/2 -ml-10">
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="./assets/logo/coxs-bazar.webp" alt="coxs-bazar">
+                    </div>
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-5">
+                    <div class="flex flex-col gap-1.5">
+                        <a href="#" class="text-sm font-raleway font-bold leading-4 text-title transition-all hover:text-blue">Cox’s Bazar Tour Package: Explore the Largest Sea Beach in Bangladesh</a>
+                      <div>
+                        <span class="bg-[#198754] text-[9px] font-raleway font-bold leading-2.25 px-1.5 py-0.75 text-white rounded-md">Affiliate</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <span class="text-sm font-raleway font-bold leading-4 text-title">Start From</span>
+                      <div class="flex text-lg font-roboto font-extrabold leading-4 text-title">
+                        <span>10,999</span>
+                        <span>৳</span>
+                      </div>
+                      <span class="text-xs font-raleway leading-6 font-normal text-title">*Price includes VAT & Tax</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-2 flex items-center justify-end">
+                  <a href="#" class="w-1/2 bg-[#3554d1] py-1.5 px-3 text-base leading-6 mt-2.5 text-center text-white rounded-md">Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white ml-10 rounded-lg cursor-grab">
+                <div class="flex gap-5 py-5">
+                  <div class="w-1/2 -ml-10">
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="./assets/logo/dhaka.webp" alt="training-center">
+                    </div>
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-5">
+                    <div class="flex flex-col gap-1.5">
+                        <a href="#" class="text-sm font-raleway font-bold leading-4 text-title transition-all hover:text-blue">Dhaka - Saint Martin - Dhaka Tour Package: Discover the Coral Island Paradise</a>
+                      <div>
+                        <span class="bg-[#198754] text-[9px] font-raleway font-bold leading-2.25 px-1.5 py-0.75 text-white rounded-md">Affiliate</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <span class="text-sm font-raleway font-bold leading-4 text-title">Start From</span>
+                      <div class="flex text-lg font-roboto font-extrabold leading-4 text-title">
+                        <span>12,990</span>
+                        <span>৳</span>
+                      </div>
+                      <span class="text-xs font-raleway leading-6 font-normal text-title">*Price includes VAT & Tax</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-2 flex items-center justify-end">
+                  <a href="#" class="w-1/2 bg-[#3554d1] py-1.5 px-3 text-base leading-6 mt-2.5 text-center text-white rounded-md">Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white ml-10 rounded-lg cursor-grab">
+                <div class="flex gap-5 py-5">
+                  <div class="w-1/2 -ml-10">
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="./assets/logo/sajek.webp" alt="sajek">
+                    </div>
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-5">
+                    <div class="flex flex-col gap-1.5">
+                        <a href="#" class="text-sm font-raleway font-bold leading-4 text-title transition-all hover:text-blue">Dhaka - Sajek - Dhaka Tour Package: Discover the Land of Clouds</a>
+                      <div>
+                        <span class="bg-[#198754] text-[9px] font-raleway font-bold leading-2.25 px-1.5 py-0.75 text-white rounded-md">Affiliate</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <span class="text-sm font-raleway font-bold leading-4 text-title">Start From</span>
+                      <div class="flex text-lg font-roboto font-extrabold leading-4 text-title">
+                        <span>11,800</span>
+                        <span>৳</span>
+                      </div>
+                      <span class="text-xs font-raleway leading-6 font-normal text-title">*Price includes VAT & Tax</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-2 flex items-center justify-end">
+                  <a href="#" class="w-1/2 bg-[#3554d1] py-1.5 px-3 text-base leading-6 mt-2.5 text-center text-white rounded-md">Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white ml-10 rounded-lg cursor-grab">
+                <div class="flex gap-5 py-5">
+                  <div class="w-1/2 -ml-10">
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="./assets/logo/sylhet.webp" alt="sylhet">
+                    </div>
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-5">
+                    <div class="flex flex-col gap-1.5">
+                        <a href="#" class="text-sm font-raleway font-bold leading-4 text-title transition-all hover:text-blue">Dhaka - Sylhet - Dhaka Tour Package: Experience the Heart of Sylhet</a>
+                      <div>
+                        <span class="bg-[#198754] text-[9px] font-raleway font-bold leading-2.25 px-1.5 py-0.75 text-white rounded-md">Affiliate</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <span class="text-sm font-raleway font-bold leading-4 text-title">Start From</span>
+                      <div class="flex text-lg font-roboto font-extrabold leading-4 text-title">
+                        <span>11,630</span>
+                        <span>৳</span>
+                      </div>
+                      <span class="text-xs font-raleway leading-6 font-normal text-title">*Price includes VAT & Tax</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-2 flex items-center justify-end">
+                  <a href="#" class="w-1/2 bg-[#3554d1] py-1.5 px-3 text-base leading-6 mt-2.5 text-center text-white rounded-md">Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white ml-10 rounded-lg cursor-grab">
+                <div class="flex gap-5 py-5">
+                  <div class="w-1/2 -ml-10">
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="./assets/logo/digitalmarketing.webp" alt="digitalmarketing">
+                    </div>
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-5">
+                    <div class="flex flex-col gap-1.5">
+                        <a href="#" class="text-sm font-raleway font-bold leading-4 text-title transition-all hover:text-blue">Digital Marketing and Freelancing Course by Otithee Skill and Development Limited</a>
+                      <div>
+                        <span class="bg-[#198754] text-[9px] font-raleway font-bold leading-2.25 px-1.5 py-0.75 text-white rounded-md">Affiliate</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <span class="text-sm font-raleway font-bold leading-4 text-title">Start From</span>
+                      <div class="flex text-lg font-roboto font-extrabold leading-4 text-title">
+                        <span>7,800</span>
+                        <span>৳</span>
+                      </div>
+                      <span class="text-xs font-raleway leading-6 font-normal text-title">*Price includes VAT & Tax</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-2 flex items-center justify-end">
+                  <a href="#" class="w-1/2 bg-[#3554d1] py-1.5 px-3 text-base leading-6 mt-2.5 text-center text-white rounded-md">Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-col bg-white ml-10 rounded-lg cursor-grab">
+                <div class="flex gap-5 py-5">
+                  <div class="w-1/2 -ml-10">
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="./assets/logo/real-state.webp" alt="real-state">
+                    </div>
+                  </div>
+                  <div class="w-1/2 flex flex-col gap-5">
+                    <div class="flex flex-col gap-1.5">
+                        <a href="#" class="text-sm font-raleway font-bold leading-4 text-title transition-all hover:text-blue">Real Estate Investment Package: Secure Your Future with Otithee City & Resort Limited</a>
+                      <div>
+                        <span class="bg-[#198754] text-[9px] font-raleway font-bold leading-2.25 px-1.5 py-0.75 text-white rounded-md">Affiliate</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                      <span class="text-sm font-raleway font-bold leading-4 text-title">Start From</span>
+                      <div class="flex text-lg font-roboto font-extrabold leading-4 text-title">
+                        <span>310,000</span>
+                        <span>৳</span>
+                      </div>
+                      <span class="text-xs font-raleway leading-6 font-normal text-title">*Price includes VAT & Tax</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-2 flex items-center justify-end">
+                  <a href="#" class="w-1/2 bg-[#3554d1] py-1.5 px-3 text-base leading-6 mt-2.5 text-center text-white rounded-md">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+    </div>
+  </section>
+  <!-- Packages section end -->
+
+  <!-- Top Destinations section start -->
+   <section class="destinations pt-10 pb-10 md:pb-15">
+      <div class="container">
+          <div class="flex items-center justify-between pb-5 md:pb-6">
+            <h2>Top Destinations in 2026</h2>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="relative overflow-hidden group">
+                  <div class="rounded-2xl overflow-hidden">
+                    <img src="./assets/logo/dhaka_1.jpg" alt="Dhaka">
+                  </div>
+                  <div class="absolute z-10 top-0 left-0 w-full h-full bg-[rgba(5,16,54,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 [ease:cubic-bezier(0.165,0.84,0.44,1)] rounded-2xl"></div>
+                  <div class="absolute top-0 left-0 right-0 z-50 flex flex-col justify-end w-full h-full px-5 py-7 transform translate-y-20 group-hover:translate-y-0 transition-all duration-500">
+                    <div class="">
+                      <h4 class="text-center text-white mb-5">Dhaka</h4>
+                      <button class="w-full text-[15px] font-jost text-title font-medium flex items-center justify-center leading-[1.2] rounded-sm bg-white h-10 cursor-pointer transition-all hover:bg-blue hover:text-white">Discover</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative overflow-hidden group">
+                  <div class="rounded-2xl overflow-hidden">
+                    <img src="./assets/logo/coxbazar_1.jpg" alt="coxs-bazar">
+                  </div>
+                  <div class="absolute z-10 top-0 left-0 w-full h-full bg-[rgba(5,16,54,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 [ease:cubic-bezier(0.165,0.84,0.44,1)] rounded-2xl"></div>
+                  <div class="absolute top-0 left-0 right-0 z-50 flex flex-col justify-end w-full h-full px-5 py-7 transform translate-y-20 group-hover:translate-y-0 transition-all duration-500">
+                    <div class="">
+                      <h4 class="text-center text-white mb-5">Cox's Bazar</h4>
+                      <button class="w-full text-[15px] font-jost text-title font-medium flex items-center justify-center leading-[1.2] rounded-sm bg-white h-10 cursor-pointer transition-all hover:bg-blue hover:text-white">Discover</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative overflow-hidden group">
+                  <div class="rounded-2xl overflow-hidden">
+                    <img src="./assets/logo/sajek_1.jpg" alt="sajek">
+                  </div>
+                  <div class="absolute z-10 top-0 left-0 w-full h-full bg-[rgba(5,16,54,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 [ease:cubic-bezier(0.165,0.84,0.44,1)] rounded-2xl"></div>
+                  <div class="absolute top-0 left-0 right-0 z-50 flex flex-col justify-end w-full h-full px-5 py-7 transform translate-y-20 group-hover:translate-y-0 transition-all duration-500">
+                    <div class="">
+                      <h4 class="text-center text-white mb-5">Sajek</h4>
+                      <button class="w-full text-[15px] font-jost text-title font-medium flex items-center justify-center leading-[1.2] rounded-sm bg-white h-10 cursor-pointer transition-all hover:bg-blue hover:text-white">Discover</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative overflow-hidden group">
+                  <div class="rounded-2xl overflow-hidden">
+                    <img src="./assets/logo/srimongol.jpg" alt="srimongol">
+                  </div>
+                  <div class="absolute z-10 top-0 left-0 w-full h-full bg-[rgba(5,16,54,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 [ease:cubic-bezier(0.165,0.84,0.44,1)] rounded-2xl"></div>
+                  <div class="absolute top-0 left-0 right-0 z-50 flex flex-col justify-end w-full h-full px-5 py-7 transform translate-y-20 group-hover:translate-y-0 transition-all duration-500">
+                    <div class="">
+                      <h4 class="text-center text-white mb-5">Srimongol</h4>
+                      <button class="w-full text-[15px] font-jost text-title font-medium flex items-center justify-center leading-[1.2] rounded-sm bg-white h-10 cursor-pointer transition-all hover:bg-blue hover:text-white">Discover</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative overflow-hidden group">
+                  <div class="rounded-2xl overflow-hidden">
+                    <img src="./assets/logo/jaflong.jpg" alt="jaflong">
+                  </div>
+                  <div class="absolute z-10 top-0 left-0 w-full h-full bg-[rgba(5,16,54,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 [ease:cubic-bezier(0.165,0.84,0.44,1)] rounded-2xl"></div>
+                  <div class="absolute top-0 left-0 right-0 z-50 flex flex-col justify-end w-full h-full px-5 py-7 transform translate-y-20 group-hover:translate-y-0 transition-all duration-500">
+                    <div class="">
+                      <h4 class="text-center text-white mb-5">Jaflong</h4>
+                      <button class="w-full text-[15px] font-jost text-title font-medium flex items-center justify-center leading-[1.2] rounded-sm bg-white h-10 cursor-pointer transition-all hover:bg-blue hover:text-white">Discover</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative overflow-hidden group">
+                  <div class="rounded-2xl overflow-hidden">
+                    <img src="./assets/logo/kaptai.jpg" alt="kaptai">
+                  </div>
+                  <div class="absolute z-10 top-0 left-0 w-full h-full bg-[rgba(5,16,54,0.4)] opacity-0 group-hover:opacity-100 transition-all duration-500 [ease:cubic-bezier(0.165,0.84,0.44,1)] rounded-2xl"></div>
+                  <div class="absolute top-0 left-0 right-0 z-50 flex flex-col justify-end w-full h-full px-5 py-7 transform translate-y-20 group-hover:translate-y-0 transition-all duration-500">
+                    <div class="">
+                      <h4 class="text-center text-white mb-5">Kaptai</h4>
+                      <button class="w-full text-[15px] font-jost text-title font-medium flex items-center justify-center leading-[1.2] rounded-sm bg-white h-10 cursor-pointer transition-all hover:bg-blue hover:text-white">Discover</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>          
+      </div>
+   </section>
+  <!-- Top Destinations section end -->
+<!-- Exclusive Offers section start -->
+ <section class="exclusive pb-10 md:pb-15">
+  <div class="container">
+    <div class="flex items-center justify-between pb-5 md:pb-6">
+      <h2>Exclusive Offers</h2>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class=" shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)] rounded-[10px] overflow-hidden cursor-pointer">
+            <img class="w-full block object-fill h-full" src="./assets/logo/city.jpeg" alt="city">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)] rounded-[10px] overflow-hidden cursor-pointer">
+            <img class="w-full block object-fill h-full" src="./assets/logo/hotel.jpg" alt="hotel">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)] rounded-[10px] overflow-hidden">
+            <img class="w-full block object-fill h-full" src="./assets/logo/digital.jpg" alt="digital">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+ </section>
+<!-- Exclusive Offers section end -->
+
+<!-- Popular Hotels section start -->
+ <section class="popular-hotel pt-10 pb-10 md:pb-15 bg-[#E5F0FD]">
+    <div class="container">
+      <div class="flex items-center justify-between pb-5 md:pb-6">
+        <h2>Popular Hotels</h2>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/lakshore.webp" alt="lakshore">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">LAKESHORE HEIGHTS</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>28,125</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">House- 03, Road- 126, Gulshan-1, Dhaka 1212, Bangladesh, Gulshan, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/ramada.webp" alt="ramada">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Ramada by Wyndham Cox's Bazar</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>20,000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Kolatoli Beach, Cox's Bazar, Bangladesh, Gulshan, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/agarbad.webp" alt="agarbad">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Hotel Agrabad</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>19,872</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Sabder Ali Road, Agrabad C/A, Chattogram 4000, Bangladesh, Chattogram Sadar, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/spring-hil.webp" alt="spring-hil">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Spring Hill Apartments</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>17,280</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Road 24 House-31, Prova Tower (Floor - 3rd) Gulshan-1 Dhaka, Dhaka Division, 121, Gulshan, 1212, Gulshan, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/sarina.webp" alt="sarina">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Hotel Sarina</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>16,875</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Plot #27, Road #17, Banani C/A, Dhaka 1213 Bangladesh., Gulshan, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+ </section>
+<!-- Popular Hotels section end -->
+<!-- Popular Resorts section start -->
+ <section class="popular-hotel pb-10 md:pb-15 bg-[#E5F0FD]">
+    <div class="container">
+      <div class="flex items-center justify-between pb-5 md:pb-6">
+        <h2>Popular Resorts</h2>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/grand-sultan.webp" alt="grand-sultan">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Grand Sultan Tea Resort & Golf</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>27,999</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Radhanagar, Srimongal, Moulvibazar -3210, Sylhet Division, Bangladesh., Sreemangal, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/palmyras-resort.jpg" alt="palmyras-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Palmyra's Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>18,000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Gerua Road, Jamsing, Savar, Bangladesh, Uttara, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/dream-square-resort.webp" alt="dream-square-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Dream Square Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>14,230.8</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Chalkpara, Medical Mor, Mawna, Sreepur, Gazipur-1740, Bangladesh, Sreepur, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/kokomo-sunset-resort.webp" alt="kokomo-sunset-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Kokomo Sunset Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>11,385</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Pabur Road, Surjanarayanpur, Kapasia, Gazipur, Bangladesh, Kapasia, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/sea-shell-resort.jpg" alt="sea-shell-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Sea Shell Park and Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>8,999.1</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">300 ft attached Purbachal New Town, Purbachal, Dhaka, Gulshan, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+ </section>
+<!-- Popular Resorts section end -->
+
+<!-- Popular Apartments section start -->
+ <section class="popular-hotel pb-10 md:pb-15 bg-[#E5F0FD]">
+    <div class="container">
+      <div class="flex items-center justify-between pb-5 md:pb-6">
+        <h2>Popular Apartments</h2>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/billals-banglow.webp" alt="billals-banglow">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Billal's Banglow</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>650,000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">House#5, Road-12, Block-k,Baridhara Diplomatic&nbsp;Zone, Gulshan, Dhaka, Bangladesh, Gulshan, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/palmyras-resort.jpg" alt="palmyras-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Palmyra's Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>18,000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Gerua Road, Jamsing, Savar, Bangladesh, Uttara, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/dream-square-resort.webp" alt="dream-square-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Dream Square Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>14,230.8</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Chalkpara, Medical Mor, Mawna, Sreepur, Gazipur-1740, Bangladesh, Sreepur, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/kokomo-sunset-resort.webp" alt="kokomo-sunset-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Kokomo Sunset Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>11,385</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Pabur Road, Surjanarayanpur, Kapasia, Gazipur, Bangladesh, Kapasia, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/sea-shell-resort.jpg" alt="sea-shell-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Sea Shell Park and Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>8,999.1</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">300 ft attached Purbachal New Town, Purbachal, Dhaka, Gulshan, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+ </section>
+<!-- Popular Apartments section end -->
+
+<!-- Popular Shared Rooms section start -->
+ <section class="popular-hotel pb-10 md:pb-15 bg-[#E5F0FD]">
+    <div class="container">
+      <div class="flex items-center justify-between pb-5 md:pb-6">
+        <h2>Popular Shared Rooms</h2>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/shima.jpg" alt="shima">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Shima's Shared Room</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>800</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">West Thakurer Mati, Chiknagool, Jaintapur, Sylhet, Bangladesh, Jaintapur, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/reasonable-non-ac.webp" alt="palmyras-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Reasonable Non-Ac Bedroom with Attach Washroom at Khulna</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>18,000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Sonadanga Main Road, Khulna, Bangladesh, Khulna Sadar, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/dream-square-resort.webp" alt="dream-square-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Dream Square Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>14,230.8</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Chalkpara, Medical Mor, Mawna, Sreepur, Gazipur-1740, Bangladesh, Sreepur, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/kokomo-sunset-resort.webp" alt="kokomo-sunset-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Kokomo Sunset Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>11,385</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">Pabur Road, Surjanarayanpur, Kapasia, Gazipur, Bangladesh, Kapasia, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/sea-shell-resort.jpg" alt="sea-shell-resort">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class="font-normal! text-white">Sea Shell Park and Resort</h5>
+                <div class="flex items-center font-medium pb-2 pt-1">
+                  <span class="text-white">Starting from: </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>8,999.1</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white pb-4">300 ft attached Purbachal New Town, Purbachal, Dhaka, Gulshan, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+ </section>
+<!-- Popular Shared Rooms section end -->
+
+<!-- Popular Convention Hall section start -->
+ <section class="popular-hotel pb-10 md:pb-15 bg-[#E5F0FD]">
+    <div class="container">
+      <div class="flex items-center justify-between pb-5 md:pb-6">
+        <h2>Popular Convention Hall</h2>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/jolsha-celebration-hall.jpg" alt="jolsha-celebration-hall">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class=" text-white text-sm!">Jolsha Celebration Hall by Xpressmall Hotels - Restaurant & Convention Hall</h5>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Morning Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>40000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Evening Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>39000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white">S.H Tower, House 35, Gausul Azam Ave, Sector 14, Uttara, Dhaka, Dhaka, Bangladesh, Uttara, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/graver-inn-convention-hall.jpg" alt="graver-inn-convention-hall">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class=" text-white text-sm!">Graver Inn Convention Hall</h5>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Morning Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>50000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Evening Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>30000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white">East Rakhain Market,Kuakata., Kalapara, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/jolsha-celebration-hall.jpg" alt="jolsha-celebration-hall">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class=" text-white text-sm!">Jolsha Celebration Hall by Xpressmall Hotels - Restaurant & Convention Hall</h5>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Morning Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>40000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Evening Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>39000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white">S.H Tower, House 35, Gausul Azam Ave, Sector 14, Uttara, Dhaka, Dhaka, Bangladesh, Uttara, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/jolsha-celebration-hall.jpg" alt="jolsha-celebration-hall">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class=" text-white text-sm!">Jolsha Celebration Hall by Xpressmall Hotels - Restaurant & Convention Hall</h5>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Morning Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>40000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Evening Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>39000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white">S.H Tower, House 35, Gausul Azam Ave, Sector 14, Uttara, Dhaka, Dhaka, Bangladesh, Uttara, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="relative">
+              <div class="rounded-md overflow-hidden">
+                <img class="w-full h-full object-fill min-h-56.5" src="./assets/logo/jolsha-celebration-hall.jpg" alt="jolsha-celebration-hall">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-2.5 bg-linear-to-t from-[#2c5364] via-[#203a43db] to-[#0f202726] rounded-md">
+                <h5 class=" text-white text-sm!">Jolsha Celebration Hall by Xpressmall Hotels - Restaurant & Convention Hall</h5>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Morning Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>40000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <div class="flex items-center font-medium pb-1 pt-1">
+                  <span class="text-white">Evening Shift : </span>
+                  <span class="flex items-center text-white ml-2">
+                    <span>39000</span>
+                    <span>৳</span>
+                  </span>
+                </div>
+                <p class="text-white">S.H Tower, House 35, Gausul Azam Ave, Sector 14, Uttara, Dhaka, Dhaka, Bangladesh, Uttara, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+ </section>
+<!-- Popular Convention Hall section end -->
+
+  <footer>
+    <div class="container">
+      <div class="grid md:grid-cols-12 pb-15">
+        <div class="md:col-span-4 pt-15 px-3.75">
+          <h5 class="mb-5">Contact Us</h5>
+          <div class="mt-7.5">
+            <h5>Customer Care</h5>
+            <div class="flex items-center gap-1 flex-wrap">
+              <a href="tel:+88 01810 093757" class="text-blue font-medium leading-5.75">+88 01810 093757</a>
+              <a href="tel: +88 01810 093758" class="text-blue font-medium leading-5.75"> +88 01810 093758</a>
+            </div>
+
+          </div>
+          <div class="mt-5">
+            <h5 class="leading-7.5">Address</h5>
+            <p class="text-blue font-medium leading-5.75">Police Plaza Concord, Tower-1, (8th & 10th Floor), Plot-02,
+              Road-144, Gulshan, Dhaka-1212</p>
+          </div>
+        </div>
+        <div class="md:col-span-2 pt-15 px-3.75">
+          <h5 class="mb-5">Quick Links</h5>
+          <ul>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Log In</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Register</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">About Us</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Payment</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Account Delete</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 pt-15 px-3.75">
+          <h5 class="mb-5">Customer Care</h5>
+          <ul>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Contact</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Privacy Policy</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Terms & Conditions</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 pt-15 px-3.75">
+          <h5 class="mb-5">Mobile</h5>
+          <div class="space-y-3">
+            <a href="#"
+              class="text-title border border-[#DDDDDD] rounded-2xl py-2.5 px-5 flex items-center gap-4 group">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24" height="24" x="0" y="0" viewBox="0 0 22.773 22.773"
+                  style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                  <g>
+                    <path
+                      d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zM20.67 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z"
+                      fill="currentcolor" opacity="1" data-original="currentcolor"
+                      class="transition-all group-hover:text-[#0a58ca]"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-sm leading-6.5 text-[#697488]">Download on the</span>
+                <span class="text-[15px] font-medium leading-4 transition-all group-hover:text-[#0a58ca]">App
+                  Store</span>
+              </div>
+            </a>
+            <a href="#"
+              class="text-title border border-[#DDDDDD] rounded-2xl py-2.5 px-5 flex items-center gap-4 group">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24" height="24" x="0" y="0" viewBox="0 0 512.029 512.029"
+                  style="enable-background:new 0 0 512 512" xml:space="preserve"
+                  class="transition-all group-hover:text-[#0a58ca]">
+                  <g>
+                    <path
+                      d="M111.758 8.189c-20.032-11.072-43.552-10.816-63.456.16l233.28 215.2 78.368-78.368L111.758 8.189zM24.974 30.365c-5.696 9.312-8.96 19.968-8.96 31.264v388.672c0 10.944 2.976 21.376 8.352 30.496l234.592-234.592L24.974 30.365zM463.854 202.525l-74.752-41.248-84 83.968 102.944 94.944 55.84-30.816c20.096-11.136 32.128-31.104 32.128-53.44-.032-22.336-12.032-42.304-32.16-53.408zM282.478 267.901 47.246 503.133c10.208 5.824 21.408 8.896 32.672 8.896 10.88 0 21.824-2.752 31.84-8.288l266.784-147.232-96.064-88.608z"
+                      fill="currentcolor" opacity="1" data-original="currentcolor"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-sm leading-6.5 text-[#697488]">Get in on</span>
+                <span class="text-[15px] font-medium leading-4 transition-all group-hover:text-[#0a58ca]">Google
+                  Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-[#DDDDDD] py-5 flex items-center justify-between flex-wrap gap-5">
+        <div>
+          <p class="text-base leading-7.5">© 2026 Otithee.com All rights reserved.</p>
+        </div>
+        <div class="flex items-center">
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#1877F2"
+              style="color:#1877F2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" color="#FF0000"
+              style="color:#FF0000" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#fd1d1d"
+              style="color:#fd1d1d" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#0077B5"
+              style="color:#0077B5" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
