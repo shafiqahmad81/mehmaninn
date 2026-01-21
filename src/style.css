@@ -1,6 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-
 
 
 
@@ -22,7 +22,7 @@
 
 
 @utility container {
-    @apply mx-auto px-1.25 sm:px-6;
+    @apply mx-auto px-6;
 
     @media (width >=82.5rem) {
         max-width: var(--breakpoint-1xl);
@@ -50,6 +50,24 @@ h5{
 
 body{
   @apply text-xs font-normal font-jost leading-3.5 text-body
+}
+
+.transparent-header{
+  @apply bg-white/39
+  
+}
+.header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.color-header {
+    background-color: #fff;
+    box-shadow: 4px 0px 8px 0px #a5a5a5;
 }
 
 .swiper{

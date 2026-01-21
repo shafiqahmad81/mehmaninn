@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="./src/style.css">
+
+  <title>Login</title>
+
+</head>
+
+<body>
+  <!-- Header section start -->
+  <header class=" py-2.5 header bg-white shadow-[4px_0px_8px_0px_#a5a5a5]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="flex flex-1 items-center">
+          <a href="#" class="w-full inline-block max-w-35">
+            <img class="hidden md:block" src="./assets/logo/logo.png" alt="logo">
+            <img class="md:hidden w-10 my-2" src="./assets/logo/tab-logo.png" alt="logo">
+          </a>
+          <div id="menu">
+            <ul class="hidden lg:flex flex-wrap items-center ">
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Apartments</a>
+              </li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Hotels</a>
+              </li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Resorts</a>
+              </li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Shared
+                  Rooms</a></li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Convention
+                  Hall</a></li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Transports</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="flex items-center xl:gap-5">
+          <div class="relative inline-block">
+            <!-- BUTTON -->
+            <button id="langToggle" class="flex items-center px-3 py-2 text-base font-medium leading-6">
+
+              <span class="combo flex items-center gap-2" data-lang="en">
+                <img src="./assets/logo/US.svg" class="w-6">
+                <span>EN |</span>
+              </span>
+
+              <span class="combo flex items-center gap-2" data-lang="bn">
+                <img src="./assets/logo/BD.svg" class="w-6">
+                <span>BN |</span>
+              </span>
+
+              <span class="combo flex items-center gap-2" data-lang="ar">
+                <img src="./assets/logo/AE.svg" class="w-6">
+                <span>AR |</span>
+              </span>
+
+              <span class="currency ml-1">BDT</span>
+            </button>
+
+            <!-- DROPDOWN -->
+            <form action="#">
+              <div id="langDropdown"
+                class="hidden absolute left-0 mt-2 w-100 bg-white rounded-sm border border-black/17 shadow p-5 z-50">
+
+                <div class="grid grid-cols-2 gap-8">
+
+                  <!-- Language -->
+                  <div>
+                    <h4 class="font-semibold mb-4">Select Language</h4>
+
+                    <label class="flex items-center gap-2 mb-3 text-base leading-7.5 ">
+                      <input type="radio" name="language" value="en" checked class="w-5 h-5">
+                      English
+                    </label>
+
+                    <label class="flex items-center gap-2 mb-3 text-base leading-7.5">
+                      <input type="radio" name="language" value="bn" class="w-5 h-5">
+                      বাংলা
+                    </label>
+
+                    <label class="flex items-center gap-2 text-base leading-7.5">
+                      <input type="radio" name="language" value="ar" class="w-5 h-5">
+                      عربي
+                    </label>
+                  </div>
+
+                  <!-- Currency -->
+                  <div>
+                    <h4 class="font-semibold mb-4">Select Currency</h4>
+
+                    <label class="flex items-center gap-2 mb-3 text-base leading-7.5">
+                      <input type="radio" name="currency" value="BDT" checked class="w-5 h-5">
+                      BDT
+                    </label>
+
+                    <label class="flex items-center gap-2 mb-3 text-base leading-7.5">
+                      <input type="radio" name="currency" value="USD" class="w-5 h-5">
+                      USD
+                    </label>
+
+                    <label class="flex items-center gap-2 text-base leading-7.5">
+                      <input type="radio" name="currency" value="AED" class="w-5 h-5">
+                      AED
+                    </label>
+                  </div>
+
+                </div>
+                <button
+                  class="w-full bg-blue transition-all hover:bg-title text-[15px] font-medium leading-4.5 h-10 text-white mt-10 cursor-pointer rounded-sm">Apply</button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <a href="#"
+              class="px-3 py-1.5 bg-[#198754] text-[15px] font-medium leading-[1.2] rounded-sm text-center text-white">Sign
+              In</a>
+          </div>
+          <div class="hidden w-13 py-1.5 px-3">
+            <div class="relative ">
+              <button
+                class=" after:content-[''] after:inline-block after:ml-[0.255em] after:align-[0.255em] after:border-t-[4.8px] after:border-t-current after:border-r-[4.8px] after:border-r-transparent after:border-l-[4.8px] after:border-l-transparent after:border-b-0 after:absolute after:top-1 after:right-0 cursor-pointer">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="16"
+                  width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112v25.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V208c0-61.9 50.1-112 112-112zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="hidden w-15 py-1.5 px-3">
+            <div class="relative ">
+              <button
+                class=" after:content-[''] after:inline-block after:ml-[0.255em] after:align-[0.255em] after:border-t-[4.8px] after:border-t-current after:border-r-[4.8px] after:border-r-transparent after:border-l-[4.8px] after:border-l-transparent after:border-b-0 after:absolute after:top-2 after:right-0 cursor-pointer">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" color="#000"
+                  height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 0, 0);">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM74.08,197.5a64,64,0,0,1,107.84,0,87.83,87.83,0,0,1-107.84,0ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120Zm97.76,66.41a79.66,79.66,0,0,0-36.06-28.75,48,48,0,1,0-59.4,0,79.66,79.66,0,0,0-36.06,28.75,88,88,0,1,1,131.52,0Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header section end -->
+
+  <!-- Login Page Start -->
+  <section class="min-h-[calc(100vh-80px-60px)] flex items-center justify-center p-4 mt-14 lg:mt-22 bg-[#E5F0FD] overflow-y-auto">
+    <!-- Login Card -->
+    <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-8 min-h-full">
+      <h2 class="text-[22px]! font-bold mb-2 text-title">Welcome back</h2>
+      <p class="text-gray-500 text-base leading-7.5 mb-6">Don't have an account yet? <a href="singin.html" class="text-blue">Sign Up</a></p>
+
+      <form class="form-area flex flex-col gap-4">
+        <div class="relative">
+          <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue" for="Mobile Number or Email *">Mobile Number or Email *</label>
+          <input type="email" name="email" placeholder="Mobile Number or Email *"
+          class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+        </div>
+        <div class="relative">
+          <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue" for="password *">Password *</label>
+          <input type="password" name="password" placeholder="Password *"
+          class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+        </div>
+        <div>
+          <a href="#" class="text-blue text-sm font-medium leading-6.5 underline hover:no-underline inline-block">Forgot your Password?</a>
+        </div>
+
+        <button type="submit"
+          class="mt-4 bg-[#198754] text-white py-5 text-[15px] font-medium leading-4.5 rounded-md hover:bg-[#157347] transition-all cursor-pointer">Sign
+          In </button>
+      </form>
+
+      <p class="text-center text-title mt-4 text-base leading-7.5">or sign in with</p>
+      <button
+        class="w-full flex items-center justify-center gap-4 text-[15px] font-medium leading-4.5 border border-blue text-blue py-5 rounded-md  hover:bg-blue hover:text-white transition-all">
+        <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+	c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+	c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+	C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path></svg></span>
+          
+        Sign In with Google
+      </button>
+    </div>
+  </section>
+  <!-- Login Page End -->
+   <!-- Trabel section start -->
+    <section class="py-15 bg-[#0D2857]">
+      <div class="container">
+        <div class="flex flex-col gap-y-5 lg:flex-row items-center justify-between">
+          <div class="w-full lg:max-w-118 flex flex-col sm:flex-row sm:items-center gap-5">
+            <div class="max-w-15">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 60 60" style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-full"><g><g fill="#000" fill-rule="nonzero"><path d="M31.238 33.99a22.112 22.112 0 0 1-6.604-1.042 9.99 9.99 0 0 1-6.636-7.563c-.753-3.626.62-7.46 3.764-10.52a17.43 17.43 0 0 1 1.052-.944 12.746 12.746 0 0 1 11.605-2.505 9.717 9.717 0 0 1 6.756 8.937 9.206 9.206 0 0 1-2.152 6.506 5.058 5.058 0 0 1-4.946 1.816A2.857 2.857 0 0 1 32.24 27.4a2.715 2.715 0 0 1-.264-2.11c.875-3.306 1.764-8.33 1.773-8.38a1 1 0 1 1 1.97.348c-.037.209-.913 5.157-1.809 8.543a.722.722 0 0 0 .045.569.89.89 0 0 0 .58.357 3.106 3.106 0 0 0 2.985-1.185 7.198 7.198 0 0 0 1.66-5.087 7.735 7.735 0 0 0-5.356-7.13 10.701 10.701 0 0 0-9.734 2.135c-.321.267-.634.546-.934.838-1.554 1.512-4.037 4.65-3.2 8.68a8.098 8.098 0 0 0 5.285 6.064c4.69 1.496 11.43 1.677 14.98-2.738a1 1 0 0 1 1.559 1.252c-2.626 3.266-6.622 4.434-10.542 4.434z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M27.815 28.805a4.598 4.598 0 0 1-2.92-.981c-1.919-1.536-1.972-4.205-1.434-6.022.182-.605.425-1.19.727-1.745a8.198 8.198 0 0 1 3.435-3.565 4.729 4.729 0 0 1 5.563.896 7.484 7.484 0 0 1 1.594 2.746 1 1 0 0 1-1.884.67 5.579 5.579 0 0 0-1.156-2.035 2.707 2.707 0 0 0-3.234-.483 6.269 6.269 0 0 0-2.565 2.733 7.16 7.16 0 0 0-.563 1.356c-.389 1.314-.303 3.03.769 3.888 1.172.942 3.15.544 4.263-.416a11.152 11.152 0 0 0 2.113-2.572 1 1 0 1 1 1.7 1.055 13.128 13.128 0 0 1-2.503 3.027 6.144 6.144 0 0 1-3.905 1.448z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M57 60H3a3.003 3.003 0 0 1-3-3V20a1 1 0 0 1 1.64-.769l24.536 20.392a6.005 6.005 0 0 0 7.65 0L58.36 19.23A1 1 0 0 1 60 20v37a3.003 3.003 0 0 1-3 3zM2 22.131V57c0 .552.448 1 1 1h54a1 1 0 0 0 1-1V22.131l-22.898 19.03a8.01 8.01 0 0 1-10.203.002z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M1.001 21a1 1 0 0 1-.58-1.816l9-6.38a1 1 0 0 1 1.157 1.632l-9 6.38a.994.994 0 0 1-.577.184zM58.999 21a.994.994 0 0 1-.577-.184l-9-6.38a1 1 0 0 1 1.156-1.632l9 6.38A1 1 0 0 1 59 21zM39.24 7a.997.997 0 0 1-.578-.184l-4.78-3.39a6.01 6.01 0 0 0-7.703-.047l-4.84 3.437a1 1 0 1 1-1.157-1.632l4.78-3.39a7.963 7.963 0 0 1 10.137.046l4.72 3.344A1 1 0 0 1 39.239 7zM1.65 59.46a1 1 0 0 1-.64-1.77l22.82-18.96a1 1 0 1 1 1.278 1.539l-22.82 18.96a.997.997 0 0 1-.638.231zM58.349 59.46a.994.994 0 0 1-.638-.231l-22.82-18.96a1 1 0 1 1 1.278-1.538l22.82 18.96a1 1 0 0 1-.64 1.77z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M50 28.48a1 1 0 0 1-1-1V7.008c-.003.02-.043-.008-.11-.008H11.11a.162.162 0 0 0-.12.043L11 27.48a1 1 0 0 1-2 0V7a2.06 2.06 0 0 1 2.11-2h37.78A2.06 2.06 0 0 1 51 7v20.48a1 1 0 0 1-1 1z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path></g></g></svg>
+            </div>
+            <div>
+              <h3 class="text-2xl! sm:text-[26px]! font-semibold text-white">Your travel journey starts here</h3>
+              <p class="text-base leading-7.5 text-white">Sign up and we will send the best deals to you</p>
+            </div>
+          </div>
+          <div class="w-full lg:max-w-139">
+            <form action="" class="flex items-center gap-2">
+              <div class="flex-1">
+                <input type="email" name="email" placeholder="Your Email" class="w-full bg-white h-15 px-5 py-4 text-[15px] leading-7 rounded-sm">
+              </div>
+              <button type="submit" class="bg-blue text-white px-7.5 py-4 text-[15px] leading-7 rounded-sm cursor-pointer">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-- Trabel section end -->
+
+  <!-- Footer section start -->
+  <footer>
+    <div class="container">
+      <div class="grid md:grid-cols-12 pb-15">
+        <div class="md:col-span-4 pt-15 px-3.75">
+          <h5 class="mb-5">Contact Us</h5>
+          <div class="mt-7.5">
+            <h5>Customer Care</h5>
+            <div class="flex items-center gap-1 flex-wrap">
+              <a href="tel:+88 01810 093757" class="text-blue font-medium leading-5.75">+88 01810 093757</a>
+              <a href="tel: +88 01810 093758" class="text-blue font-medium leading-5.75"> +88 01810 093758</a>
+            </div>
+
+          </div>
+          <div class="mt-5">
+            <h5 class="leading-7.5">Address</h5>
+            <p class="text-blue font-medium leading-5.75">Police Plaza Concord, Tower-1, (8th & 10th Floor), Plot-02,
+              Road-144, Gulshan, Dhaka-1212</p>
+          </div>
+        </div>
+        <div class="md:col-span-2 pt-15 px-3.75">
+          <h5 class="mb-5">Quick Links</h5>
+          <ul>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Log In</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Register</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">About Us</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Payment</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Account Delete</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 pt-15 px-3.75">
+          <h5 class="mb-5">Customer Care</h5>
+          <ul>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Contact</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Privacy Policy</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">Terms & Conditions</a></li>
+            <li><a href="#" class="text-base leading-7.5 transition-all hover:text-blue">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 pt-15 px-3.75">
+          <h5 class="mb-5">Mobile</h5>
+          <div class="space-y-3">
+            <a href="#"
+              class="text-title border border-[#DDDDDD] rounded-2xl py-2.5 px-5 flex items-center gap-4 group">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24" height="24" x="0" y="0" viewBox="0 0 22.773 22.773"
+                  style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                  <g>
+                    <path
+                      d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zM20.67 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z"
+                      fill="currentcolor" opacity="1" data-original="currentcolor"
+                      class="transition-all group-hover:text-[#0a58ca]"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-sm leading-6.5 text-[#697488]">Download on the</span>
+                <span class="text-[15px] font-medium leading-4 transition-all group-hover:text-[#0a58ca]">App
+                  Store</span>
+              </div>
+            </a>
+            <a href="#"
+              class="text-title border border-[#DDDDDD] rounded-2xl py-2.5 px-5 flex items-center gap-4 group">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24" height="24" x="0" y="0" viewBox="0 0 512.029 512.029"
+                  style="enable-background:new 0 0 512 512" xml:space="preserve"
+                  class="transition-all group-hover:text-[#0a58ca]">
+                  <g>
+                    <path
+                      d="M111.758 8.189c-20.032-11.072-43.552-10.816-63.456.16l233.28 215.2 78.368-78.368L111.758 8.189zM24.974 30.365c-5.696 9.312-8.96 19.968-8.96 31.264v388.672c0 10.944 2.976 21.376 8.352 30.496l234.592-234.592L24.974 30.365zM463.854 202.525l-74.752-41.248-84 83.968 102.944 94.944 55.84-30.816c20.096-11.136 32.128-31.104 32.128-53.44-.032-22.336-12.032-42.304-32.16-53.408zM282.478 267.901 47.246 503.133c10.208 5.824 21.408 8.896 32.672 8.896 10.88 0 21.824-2.752 31.84-8.288l266.784-147.232-96.064-88.608z"
+                      fill="currentcolor" opacity="1" data-original="currentcolor"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-sm leading-6.5 text-[#697488]">Get in on</span>
+                <span class="text-[15px] font-medium leading-4 transition-all group-hover:text-[#0a58ca]">Google
+                  Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-[#DDDDDD] py-5 flex items-center justify-between flex-wrap gap-5">
+        <div>
+          <p class="text-base leading-7.5">© 2026 Otithee.com All rights reserved.</p>
+        </div>
+        <div class="flex items-center">
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#1877F2"
+              style="color:#1877F2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" color="#FF0000"
+              style="color:#FF0000" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#fd1d1d"
+              style="color:#fd1d1d" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#0077B5"
+              style="color:#0077B5" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
