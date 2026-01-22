@@ -279,25 +279,72 @@ navigation: {
 // Login page
   document.querySelectorAll(".form-area").forEach(area => {
     area.querySelectorAll("div").forEach(wrapper => {
-      const input = wrapper.querySelector("input");
+      const field = wrapper.querySelector("input, textarea, select");
       const label = wrapper.querySelector("label");
 
-      if (!input || !label) return;
+      if (!field || !label) return;
 
-      // default label hidden
+      // label initially hidden
       label.classList.add("hidden");
 
-      input.addEventListener("focus", () => {
-        input.placeholder = "";
+      const isSelect = field.tagName === "SELECT";
+
+      field.addEventListener("focus", () => {
+        if (!isSelect) {
+          field.placeholder = "";
+        }
         label.classList.remove("hidden");
       });
 
-      input.addEventListener("blur", () => {
-        if (input.value === "") {
-          input.placeholder = label.innerText;
-          label.classList.add("hidden");
+      field.addEventListener("blur", () => {
+        if (isSelect) {
+          if (!field.value) {
+            label.classList.add("hidden");
+          }
+        } else {
+          if (field.value === "") {
+            field.placeholder = label.innerText;
+            label.classList.add("hidden");
+          }
         }
       });
+
+      // for select change
+      if (isSelect) {
+        field.addEventListener("change", () => {
+          if (field.value) {
+            label.classList.remove("hidden");
+          } else {
+            label.classList.add("hidden");
+          }
+        });
+      }
     });
   });
 
+  // Phone number
+  document.querySelectorAll(".phone").forEach(wrapper => {
+    const input = wrapper.querySelector("input");
+
+    input.addEventListener("input", () => {
+      input.value = input.value.replace(/\D/g, '');
+      if (input.value.length > 11) {
+        input.value = input.value.slice(0, 11);
+      }
+
+      if (input.value.length > 0) {
+        label.classList.remove("hidden");
+        input.placeholder = "";
+      } else {
+        label.classList.add("hidden");
+        input.placeholder = "Mobile Number *";
+      }
+    });
+
+    input.addEventListener("blur", () => {
+      if (input.value === "") {
+        label.classList.add("hidden");
+        input.placeholder = "Mobile Number *";
+      }
+    });
+  });

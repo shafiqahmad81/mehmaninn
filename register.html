@@ -6,10 +6,9 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="./src/style.css">
 
-  <title>Login</title>
+  <title>Mehmaninn | Register</title>
 
 </head>
 
@@ -162,72 +161,219 @@
   <!-- Header section end -->
 
   <!-- Login Page Start -->
-  <section class="min-h-[calc(100vh-80px-60px)] flex items-center justify-center p-4 mt-14 lg:mt-22 bg-[#E5F0FD] overflow-y-auto">
-    <!-- Login Card -->
-    <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-8 min-h-full">
-      <h2 class="text-[22px]! font-bold mb-2 text-title">Welcome back</h2>
-      <p class="text-gray-500 text-base leading-7.5 mb-6">Don't have an account yet? <a href="singin.html" class="text-blue">Sign Up</a></p>
+  <section
+    class="min-h-[calc(100vh-80px-60px)] flex items-center justify-center pt-10 pb-5 lg:pb-10 mt-14 lg:mt-22 bg-[#E5F0FD] overflow-y-auto">
+    <div class="container">
+      <!-- Login Card -->
+      <div class="w-full lg:max-w-[50%] mx-auto bg-white rounded-xl shadow-lg p-4 md:p-8 min-h-full">
+        <h2 class="text-[22px]! font-bold mb-5 text-title">Create an Account</h2>
+        <form class="form-area flex flex-col gap-4">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="relative">
+              <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue">First Name *</label>
+              <input type="text" name="text" placeholder="First Name *" required
+                class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+            </div>
+            <div class="relative">
+              <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue">Last Name *</label>
+              <input type="text" name="text" placeholder="Last Name *" required
+                class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+            </div>
+          </div>
+          <div class="relative phone">
+            <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue">Mobile Number *</label>
+            <input type="tel" name="tel" placeholder="Mobile Number *" required
+              class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+          </div>
+          <div class="relative">
+            <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue">Email</label>
+            <input type="email" name="email" placeholder="Email"
+              class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+          </div>
 
-      <form class="form-area flex flex-col gap-4">
-        <div class="relative">
-          <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue" for="Mobile Number or Email *">Mobile Number or Email *</label>
-          <input type="email" name="email" placeholder="Mobile Number or Email *"
-          class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
-        </div>
-        <div class="relative">
-          <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue" for="password *">Password *</label>
-          <input type="password" name="password" placeholder="Password *"
-          class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
-        </div>
-        <div>
-          <a href="#" class="text-blue text-sm font-medium leading-6.5 underline hover:no-underline inline-block">Forgot your Password?</a>
-        </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="w-full relative group">
+              <label for="location"
+                class="bg-white absolute -top-3 left-2 px-2 z-20 font-roboto leading-6 text-black/60 group-focus-within:text-blue-600 transition-colors">
+                Select Country
+              </label>
 
-        <button type="submit"
-          class="mt-4 bg-[#198754] text-white py-5 text-[15px] font-medium leading-4.5 rounded-md hover:bg-[#157347] transition-all cursor-pointer">Sign
-          In </button>
-      </form>
+              <div class="relative w-full">
+                <select name="location" id="location"
+                  class="w-full appearance-none border border-gray-300 rounded-sm px-4 py-3 pr-10 text-base font-roboto text-black/60 focus:outline-none focus:ring-1 focus:ring-blue focus:border-blue">
+                  <option>Select Country</option>
+                  <option>Bangladesh</option>
+                  <option>Dbai</option>
+                </select>
+                <span
+                  class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-black/60 transition-transform duration-200 group-focus-within:rotate-180 group-focus-within:text-blue-600">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M7 10l5 5 5-5z"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full relative group">
+              <label for="location"
+                class="bg-white absolute -top-3 left-2 px-2 z-20 font-roboto leading-6 text-black/60 group-focus-within:text-blue-600 transition-colors">
+                Select Region
+              </label>
 
-      <p class="text-center text-title mt-4 text-base leading-7.5">or sign in with</p>
-      <button
-        class="w-full flex items-center justify-center gap-4 text-[15px] font-medium leading-4.5 border border-blue text-blue py-5 rounded-md  hover:bg-blue hover:text-white transition-all">
-        <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
-	c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
-	c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
-	C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
-	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
-	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path></svg></span>
-          
-        Sign In with Google
-      </button>
+              <div class="relative w-full">
+                <select name="location" id="location"
+                  class="w-full appearance-none border border-gray-300 rounded-sm px-4 py-3 pr-10 text-base font-roboto text-black/60 focus:outline-none focus:ring-1 focus:ring-blue focus:border-blue">
+                  <option>Select Region</option>
+                  <option>Option</option>
+                  <option>Option</option>
+                </select>
+                <span
+                  class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-black/60 transition-transform duration-200 group-focus-within:rotate-180 group-focus-within:text-blue-600">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M7 10l5 5 5-5z"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full relative group">
+              <label for="location"
+                class="bg-white absolute -top-3 left-2 px-2 z-20 font-roboto leading-6 text-black/60 group-focus-within:text-blue-600 transition-colors">
+                Select State
+              </label>
+
+              <div class="relative w-full">
+                <select name="location" id="location"
+                  class="w-full appearance-none border border-gray-300 rounded-sm px-4 py-3 pr-10 text-base font-roboto text-black/60 focus:outline-none focus:ring-1 focus:ring-blue focus:border-blue">
+                  <option>Select State</option>
+                  <option>Option</option>
+                  <option>Option</option>
+                </select>
+                <span
+                  class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-black/60 transition-transform duration-200 group-focus-within:rotate-180 group-focus-within:text-blue-600">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M7 10l5 5 5-5z"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="w-full relative group">
+              <label for="location"
+                class="bg-white absolute -top-3 left-2 px-2 z-20 font-roboto leading-6 text-black/60 group-focus-within:text-blue-600 transition-colors">
+                Select City
+              </label>
+
+              <div class="relative w-full">
+                <select name="location" id="location"
+                  class="w-full appearance-none border border-gray-300 rounded-sm px-4 py-3 pr-10 text-base font-roboto text-black/60 focus:outline-none focus:ring-1 focus:ring-blue focus:border-blue">
+                  <option>Select City</option>
+                  <option>Option</option>
+                  <option>Option</option>
+                </select>
+                <span
+                  class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-black/60 transition-transform duration-200 group-focus-within:rotate-180 group-focus-within:text-blue-600">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M7 10l5 5 5-5z"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue">Address</label>
+            <input type="text" name="text" placeholder="Address"
+              class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+          </div>
+          <div class="relative">
+            <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue">Password *</label>
+            <input type="password" name="password" placeholder="Password *"
+              class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+          </div>
+          <div class="relative">
+            <label class="absolute -top-1.5 left-2 px-2 bg-white font-roboto text-blue">Refferal Code (Optional)</label>
+            <input type="text" name="text" placeholder="Refferal Code (Optional)"
+              class="w-full text-base font-roboto leading-5.75 border border-gray-300 rounded-sm px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-blue placeholder:text-black/60">
+          </div>
+          <div class="flex gap-2">
+            <div class="mt-1">
+              <input type="checkbox" class="w-4 h-4 rounded-md border-[#86b7fe] focus:outline-none focus:shadow-[0_0_0_0.25rem_rgba(13,110,253,0.25)]">
+            </div>
+            <p class="text-base leading-7.5 text-title">By creating and/or using your account, you agree to our <a href="/trems-conditions.html" class="text-blue ">Terms & Conditions</a> and <a href="/privacy-policy.html" class="text-blue">Privacy Policy</a>.</p>
+          </div>
+
+          <button type="submit"
+            class="mt-4 bg-blue text-white py-4 sm:py-5 text-[15px] font-medium leading-4.5 rounded-md hover:bg-title transition-all cursor-pointer flex items-center justify-center gap-2">Sign Up <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-6 h-6"><g><path fill="#ffffff" d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z" opacity="1" data-original="#ffffff"></path></g></svg></button>
+        </form>
+
+        <p class="text-center text-title mt-4 text-base leading-7.5">or sign in with</p>
+        <button
+          class="w-full flex items-center justify-center gap-4 text-[15px] font-medium leading-4.5 border border-blue text-blue py-5 rounded-md  hover:bg-[#0d6efd] hover:text-white transition-all shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]">
+          <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px"
+              viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="" height="20" width="20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+    c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+    c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+              <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+    C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+              <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+    c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+              <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+    c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+              </path>
+            </svg></span>Sign In with Google
+        </button>
+        <p class="text-[#697488] text-base leading-7.5 mt-5">Already have an account? <a href="/login.html" class="text-blue">Log In</a></p>
+      </div>
     </div>
   </section>
   <!-- Login Page End -->
-   <!-- Trabel section start -->
-    <section class="py-15 bg-[#0D2857]">
-      <div class="container">
-        <div class="flex flex-col gap-y-5 lg:flex-row items-center justify-between">
-          <div class="w-full lg:max-w-118 flex flex-col sm:flex-row sm:items-center gap-5">
-            <div class="max-w-15">
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 60 60" style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-full"><g><g fill="#000" fill-rule="nonzero"><path d="M31.238 33.99a22.112 22.112 0 0 1-6.604-1.042 9.99 9.99 0 0 1-6.636-7.563c-.753-3.626.62-7.46 3.764-10.52a17.43 17.43 0 0 1 1.052-.944 12.746 12.746 0 0 1 11.605-2.505 9.717 9.717 0 0 1 6.756 8.937 9.206 9.206 0 0 1-2.152 6.506 5.058 5.058 0 0 1-4.946 1.816A2.857 2.857 0 0 1 32.24 27.4a2.715 2.715 0 0 1-.264-2.11c.875-3.306 1.764-8.33 1.773-8.38a1 1 0 1 1 1.97.348c-.037.209-.913 5.157-1.809 8.543a.722.722 0 0 0 .045.569.89.89 0 0 0 .58.357 3.106 3.106 0 0 0 2.985-1.185 7.198 7.198 0 0 0 1.66-5.087 7.735 7.735 0 0 0-5.356-7.13 10.701 10.701 0 0 0-9.734 2.135c-.321.267-.634.546-.934.838-1.554 1.512-4.037 4.65-3.2 8.68a8.098 8.098 0 0 0 5.285 6.064c4.69 1.496 11.43 1.677 14.98-2.738a1 1 0 0 1 1.559 1.252c-2.626 3.266-6.622 4.434-10.542 4.434z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M27.815 28.805a4.598 4.598 0 0 1-2.92-.981c-1.919-1.536-1.972-4.205-1.434-6.022.182-.605.425-1.19.727-1.745a8.198 8.198 0 0 1 3.435-3.565 4.729 4.729 0 0 1 5.563.896 7.484 7.484 0 0 1 1.594 2.746 1 1 0 0 1-1.884.67 5.579 5.579 0 0 0-1.156-2.035 2.707 2.707 0 0 0-3.234-.483 6.269 6.269 0 0 0-2.565 2.733 7.16 7.16 0 0 0-.563 1.356c-.389 1.314-.303 3.03.769 3.888 1.172.942 3.15.544 4.263-.416a11.152 11.152 0 0 0 2.113-2.572 1 1 0 1 1 1.7 1.055 13.128 13.128 0 0 1-2.503 3.027 6.144 6.144 0 0 1-3.905 1.448z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M57 60H3a3.003 3.003 0 0 1-3-3V20a1 1 0 0 1 1.64-.769l24.536 20.392a6.005 6.005 0 0 0 7.65 0L58.36 19.23A1 1 0 0 1 60 20v37a3.003 3.003 0 0 1-3 3zM2 22.131V57c0 .552.448 1 1 1h54a1 1 0 0 0 1-1V22.131l-22.898 19.03a8.01 8.01 0 0 1-10.203.002z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M1.001 21a1 1 0 0 1-.58-1.816l9-6.38a1 1 0 0 1 1.157 1.632l-9 6.38a.994.994 0 0 1-.577.184zM58.999 21a.994.994 0 0 1-.577-.184l-9-6.38a1 1 0 0 1 1.156-1.632l9 6.38A1 1 0 0 1 59 21zM39.24 7a.997.997 0 0 1-.578-.184l-4.78-3.39a6.01 6.01 0 0 0-7.703-.047l-4.84 3.437a1 1 0 1 1-1.157-1.632l4.78-3.39a7.963 7.963 0 0 1 10.137.046l4.72 3.344A1 1 0 0 1 39.239 7zM1.65 59.46a1 1 0 0 1-.64-1.77l22.82-18.96a1 1 0 1 1 1.278 1.539l-22.82 18.96a.997.997 0 0 1-.638.231zM58.349 59.46a.994.994 0 0 1-.638-.231l-22.82-18.96a1 1 0 1 1 1.278-1.538l22.82 18.96a1 1 0 0 1-.64 1.77z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M50 28.48a1 1 0 0 1-1-1V7.008c-.003.02-.043-.008-.11-.008H11.11a.162.162 0 0 0-.12.043L11 27.48a1 1 0 0 1-2 0V7a2.06 2.06 0 0 1 2.11-2h37.78A2.06 2.06 0 0 1 51 7v20.48a1 1 0 0 1-1 1z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path></g></g></svg>
-            </div>
-            <div>
-              <h3 class="text-2xl! sm:text-[26px]! font-semibold text-white">Your travel journey starts here</h3>
-              <p class="text-base leading-7.5 text-white">Sign up and we will send the best deals to you</p>
-            </div>
+  <!-- Trabel section start -->
+  <section class="py-15 bg-[#0D2857]">
+    <div class="container">
+      <div class="flex flex-col gap-y-5 lg:flex-row items-center justify-between">
+        <div class="w-full lg:max-w-118 flex flex-col sm:flex-row sm:items-center gap-5">
+          <div class="max-w-15">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
+              viewBox="0 0 60 60" style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-full">
+              <g>
+                <g fill="#000" fill-rule="nonzero">
+                  <path
+                    d="M31.238 33.99a22.112 22.112 0 0 1-6.604-1.042 9.99 9.99 0 0 1-6.636-7.563c-.753-3.626.62-7.46 3.764-10.52a17.43 17.43 0 0 1 1.052-.944 12.746 12.746 0 0 1 11.605-2.505 9.717 9.717 0 0 1 6.756 8.937 9.206 9.206 0 0 1-2.152 6.506 5.058 5.058 0 0 1-4.946 1.816A2.857 2.857 0 0 1 32.24 27.4a2.715 2.715 0 0 1-.264-2.11c.875-3.306 1.764-8.33 1.773-8.38a1 1 0 1 1 1.97.348c-.037.209-.913 5.157-1.809 8.543a.722.722 0 0 0 .045.569.89.89 0 0 0 .58.357 3.106 3.106 0 0 0 2.985-1.185 7.198 7.198 0 0 0 1.66-5.087 7.735 7.735 0 0 0-5.356-7.13 10.701 10.701 0 0 0-9.734 2.135c-.321.267-.634.546-.934.838-1.554 1.512-4.037 4.65-3.2 8.68a8.098 8.098 0 0 0 5.285 6.064c4.69 1.496 11.43 1.677 14.98-2.738a1 1 0 0 1 1.559 1.252c-2.626 3.266-6.622 4.434-10.542 4.434z"
+                    fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path>
+                  <path
+                    d="M27.815 28.805a4.598 4.598 0 0 1-2.92-.981c-1.919-1.536-1.972-4.205-1.434-6.022.182-.605.425-1.19.727-1.745a8.198 8.198 0 0 1 3.435-3.565 4.729 4.729 0 0 1 5.563.896 7.484 7.484 0 0 1 1.594 2.746 1 1 0 0 1-1.884.67 5.579 5.579 0 0 0-1.156-2.035 2.707 2.707 0 0 0-3.234-.483 6.269 6.269 0 0 0-2.565 2.733 7.16 7.16 0 0 0-.563 1.356c-.389 1.314-.303 3.03.769 3.888 1.172.942 3.15.544 4.263-.416a11.152 11.152 0 0 0 2.113-2.572 1 1 0 1 1 1.7 1.055 13.128 13.128 0 0 1-2.503 3.027 6.144 6.144 0 0 1-3.905 1.448z"
+                    fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path>
+                  <path
+                    d="M57 60H3a3.003 3.003 0 0 1-3-3V20a1 1 0 0 1 1.64-.769l24.536 20.392a6.005 6.005 0 0 0 7.65 0L58.36 19.23A1 1 0 0 1 60 20v37a3.003 3.003 0 0 1-3 3zM2 22.131V57c0 .552.448 1 1 1h54a1 1 0 0 0 1-1V22.131l-22.898 19.03a8.01 8.01 0 0 1-10.203.002z"
+                    fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path>
+                  <path
+                    d="M1.001 21a1 1 0 0 1-.58-1.816l9-6.38a1 1 0 0 1 1.157 1.632l-9 6.38a.994.994 0 0 1-.577.184zM58.999 21a.994.994 0 0 1-.577-.184l-9-6.38a1 1 0 0 1 1.156-1.632l9 6.38A1 1 0 0 1 59 21zM39.24 7a.997.997 0 0 1-.578-.184l-4.78-3.39a6.01 6.01 0 0 0-7.703-.047l-4.84 3.437a1 1 0 1 1-1.157-1.632l4.78-3.39a7.963 7.963 0 0 1 10.137.046l4.72 3.344A1 1 0 0 1 39.239 7zM1.65 59.46a1 1 0 0 1-.64-1.77l22.82-18.96a1 1 0 1 1 1.278 1.539l-22.82 18.96a.997.997 0 0 1-.638.231zM58.349 59.46a.994.994 0 0 1-.638-.231l-22.82-18.96a1 1 0 1 1 1.278-1.538l22.82 18.96a1 1 0 0 1-.64 1.77z"
+                    fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path>
+                  <path
+                    d="M50 28.48a1 1 0 0 1-1-1V7.008c-.003.02-.043-.008-.11-.008H11.11a.162.162 0 0 0-.12.043L11 27.48a1 1 0 0 1-2 0V7a2.06 2.06 0 0 1 2.11-2h37.78A2.06 2.06 0 0 1 51 7v20.48a1 1 0 0 1-1 1z"
+                    fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path>
+                </g>
+              </g>
+            </svg>
           </div>
-          <div class="w-full lg:max-w-139">
-            <form action="" class="flex items-center gap-2">
-              <div class="flex-1">
-                <input type="email" name="email" placeholder="Your Email" class="w-full bg-white h-15 px-5 py-4 text-[15px] leading-7 rounded-sm">
-              </div>
-              <button type="submit" class="bg-blue text-white px-7.5 py-4 text-[15px] leading-7 rounded-sm cursor-pointer">Subscribe</button>
-            </form>
+          <div>
+            <h3 class="text-2xl! sm:text-[26px]! font-semibold text-white">Your travel journey starts here</h3>
+            <p class="text-base leading-7.5 text-white">Sign up and we will send the best deals to you</p>
           </div>
         </div>
+        <div class="w-full lg:max-w-139">
+          <form action="" class="flex items-center gap-2">
+            <div class="flex-1">
+              <input type="email" name="email" placeholder="Your Email"
+                class="w-full bg-white h-13 sm:h-15 px-5 py-4 text-[15px] leading-7 rounded-sm">
+            </div>
+            <button type="submit"
+              class="bg-blue text-white px-7.5 py-3 sm:py-4 text-[15px] leading-7 rounded-sm cursor-pointer">Subscribe</button>
+          </form>
+        </div>
       </div>
-    </section>
-   <!-- Trabel section end -->
+    </div>
+  </section>
+  <!-- Trabel section end -->
 
   <!-- Footer section start -->
   <footer>
@@ -256,15 +402,18 @@
             <li><a href="/register.html" class="text-base leading-7.5 transition-all hover:text-blue">Register</a></li>
             <li><a href="/about.html" class="text-base leading-7.5 transition-all hover:text-blue">About Us</a></li>
             <li><a href="/payment.html" class="text-base leading-7.5 transition-all hover:text-blue">Payment</a></li>
-            <li><a href="/account-delete.html" class="text-base leading-7.5 transition-all hover:text-blue">Account Delete</a></li>
+            <li><a href="/account-delete.html" class="text-base leading-7.5 transition-all hover:text-blue">Account
+                Delete</a></li>
           </ul>
         </div>
         <div class="md:col-span-3 pt-15 px-3.75">
           <h5 class="mb-5">Customer Care</h5>
           <ul>
             <li><a href="/contact.html" class="text-base leading-7.5 transition-all hover:text-blue">Contact</a></li>
-            <li><a href="/privacy-policy.html" class="text-base leading-7.5 transition-all hover:text-blue">Privacy Policy</a></li>
-            <li><a href="/trems-conditions.html" class="text-base leading-7.5 transition-all hover:text-blue">Terms & Conditions</a></li>
+            <li><a href="/privacy-policy.html" class="text-base leading-7.5 transition-all hover:text-blue">Privacy
+                Policy</a></li>
+            <li><a href="/trems-conditions.html" class="text-base leading-7.5 transition-all hover:text-blue">Terms &
+                Conditions</a></li>
             <li><a href="/faq.html" class="text-base leading-7.5 transition-all hover:text-blue">FAQ</a></li>
           </ul>
         </div>
@@ -357,8 +506,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script type="module" src="./src/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

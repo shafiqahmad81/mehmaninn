@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./src/style.css">
+
+  <title>Mehmaninn | Trems & Conditions</title>
+
+</head>
+
+<body>
+  <!-- Header section start -->
+  <header class=" py-2.5 lg:py-0 header bg-white shadow-[4px_0px_8px_0px_#a5a5a5]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="flex flex-1 items-center">
+          <a href="index.html" class="w-full inline-block max-w-35">
+            <img class="hidden md:block" src="./assets/logo/logo.png" alt="logo">
+            <img class="md:hidden w-10 my-2" src="./assets/logo/tab-logo.png" alt="logo">
+          </a>
+          <div id="menu">
+            <ul class="hidden lg:flex flex-wrap items-center ">
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Apartments</a>
+              </li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Hotels</a>
+              </li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Resorts</a>
+              </li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Shared
+                  Rooms</a></li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Convention
+                  Hall</a></li>
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="#"
+                  class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white">Transports</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="flex items-center xl:gap-5">
+          <div class="relative inline-block">
+            <!-- BUTTON -->
+            <button id="langToggle" class="flex items-center px-3 py-2 text-base font-medium leading-6">
+
+              <span class="combo flex items-center gap-2" data-lang="en">
+                <img src="./assets/logo/US.svg" class="w-6">
+                <span>EN |</span>
+              </span>
+
+              <span class="combo flex items-center gap-2" data-lang="bn">
+                <img src="./assets/logo/BD.svg" class="w-6">
+                <span>BN |</span>
+              </span>
+
+              <span class="combo flex items-center gap-2" data-lang="ar">
+                <img src="./assets/logo/AE.svg" class="w-6">
+                <span>AR |</span>
+              </span>
+
+              <span class="currency ml-1">BDT</span>
+            </button>
+
+            <!-- DROPDOWN -->
+            <form action="#">
+              <div id="langDropdown"
+                class="hidden absolute left-0 mt-2 w-100 bg-white rounded-sm border border-black/17 shadow p-5 z-50">
+
+                <div class="grid grid-cols-2 gap-8">
+
+                  <!-- Language -->
+                  <div>
+                    <h4 class="font-semibold mb-4">Select Language</h4>
+
+                    <label class="flex items-center gap-2 mb-3 text-base leading-7.5 ">
+                      <input type="radio" name="language" value="en" checked class="w-5 h-5">
+                      English
+                    </label>
+
+                    <label class="flex items-center gap-2 mb-3 text-base leading-7.5">
+                      <input type="radio" name="language" value="bn" class="w-5 h-5">
+                      বাংলা
+                    </label>
+
+                    <label class="flex items-center gap-2 text-base leading-7.5">
+                      <input type="radio" name="language" value="ar" class="w-5 h-5">
+                      عربي
+                    </label>
+                  </div>
+
+                  <!-- Currency -->
+                  <div>
+                    <h4 class="font-semibold mb-4">Select Currency</h4>
+
+                    <label class="flex items-center gap-2 mb-3 text-base leading-7.5">
+                      <input type="radio" name="currency" value="BDT" checked class="w-5 h-5">
+                      BDT
+                    </label>
+
+                    <label class="flex items-center gap-2 mb-3 text-base leading-7.5">
+                      <input type="radio" name="currency" value="USD" class="w-5 h-5">
+                      USD
+                    </label>
+
+                    <label class="flex items-center gap-2 text-base leading-7.5">
+                      <input type="radio" name="currency" value="AED" class="w-5 h-5">
+                      AED
+                    </label>
+                  </div>
+
+                </div>
+                <button
+                  class="w-full bg-blue transition-all hover:bg-title text-[15px] font-medium leading-4.5 h-10 text-white mt-10 cursor-pointer rounded-sm">Apply</button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <a href="#"
+              class="px-3 py-1.5 bg-[#198754] text-[15px] font-medium leading-[1.2] rounded-sm text-center text-white">Sign
+              In</a>
+          </div>
+          <div class="hidden w-13 py-1.5 px-3">
+            <div class="relative ">
+              <button
+                class=" after:content-[''] after:inline-block after:ml-[0.255em] after:align-[0.255em] after:border-t-[4.8px] after:border-t-current after:border-r-[4.8px] after:border-r-transparent after:border-l-[4.8px] after:border-l-transparent after:border-b-0 after:absolute after:top-1 after:right-0 cursor-pointer">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="16"
+                  width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112v25.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V208c0-61.9 50.1-112 112-112zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="hidden w-15 py-1.5 px-3">
+            <div class="relative ">
+              <button
+                class=" after:content-[''] after:inline-block after:ml-[0.255em] after:align-[0.255em] after:border-t-[4.8px] after:border-t-current after:border-r-[4.8px] after:border-r-transparent after:border-l-[4.8px] after:border-l-transparent after:border-b-0 after:absolute after:top-2 after:right-0 cursor-pointer">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" color="#000"
+                  height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 0, 0);">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM74.08,197.5a64,64,0,0,1,107.84,0,87.83,87.83,0,0,1-107.84,0ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120Zm97.76,66.41a79.66,79.66,0,0,0-36.06-28.75,48,48,0,1,0-59.4,0,79.66,79.66,0,0,0-36.06,28.75,88,88,0,1,1,131.52,0Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header section end -->
+
+  <!-- Banner section start -->
+  <section class="mt-17 pt-10 pb-17.5 bg-[url('./assets/logo/parashout.png')] bg-cover bg-center">
+    <div class="container">
+      <div class="flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-white">Terms And Conditions</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Banner section end -->
+
+  <!-- About Mehmaninn section start -->
+  <section class="pt-7 lg:pt-15">
+    <div class="container">
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Introduction</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Welcome to Otithee.com, a global platform offering online booking services for hotels, resorts, convention halls, shared rooms, transport, and apartments. These Terms and Conditions outline the rules and guidelines for users (bookers) and property owners (hosts) on our website and app. By accessing and using the Otithee.com platform, you agree to comply with these terms. If you disagree with any part of the terms, please refrain from using the services.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">General Terms for Users (Bookers)</h4>
+        <span class="text-base leading-7 font-bold">Account Creation:</span>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">To access full functionality on Otithee.com, users must create an account. You are responsible for maintaining the confidentiality of your account and password, and you agree to notify us of any unauthorized access immediately. You agree to provide accurate and complete information when registering.</p>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Bookings and Reservations:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Users can book services such as hotels, resorts, transport, convention halls, shared rooms, and apartments via Otithee.com. Bookings are subject to the availability and terms set by the property owner or service provider. You agree to provide accurate and truthful information when making a reservation.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Payment and Charges:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Payments for reservations must be made via the secure third-party payment gateways provided on the website/app (e.g., SSLCOMMERZ, PayPal, credit/debit cards). Payment for all services is due at the time of booking unless otherwise stated. Prices include applicable taxes and service fees unless otherwise specified.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Cancellation and Refund Policies:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Users must adhere to the cancellation policy specified by each property or service provider. Cancellations can be made through the “Customer Care” section of the website/app. Depending on the policy of the provider, a cancellation fee may apply. Refunds, if applicable, will be processed based on the provider's policy.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">User Conduct:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Users agree not to:</p>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">- Violate any laws or regulations while using the website/app.</p>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">- Post or upload harmful content, including spam, false information, or illegal content.</p>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">- Engage in fraudulent activities, such as booking with no intent to show up (no-show) or misusing promotional codes.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">No-Show:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">If you fail to check in on the reserved date without notifying the property owner, you may lose your payment, depending on the property’s no-show policy.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Third-Party Services:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee.com may link to third-party websites or services that we do not control. We are not responsible for the content or privacy practices of these third-party sites.</p>
+        </div>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">General Terms for Property Owners (Hosts)</h4>
+        <span class="text-base leading-7 font-bold">Account Creation and Listings:</span>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Property owners must create an account to list their properties on Otithee.com. You must provide accurate and truthful information about your property, including descriptions, images, availability, and pricing. Otithee.com reserves the right to remove listings that violate our guidelines or are deemed inappropriate.</p>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Pricing and Availability:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Property owners are responsible for setting the pricing, availability, and any specific terms and conditions for their properties. Prices listed on Otithee.com must be transparent, including taxes and service charges, if applicable. Property owners must update their availability regularly to prevent overbooking.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Booking Management:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Once a booking is confirmed, property owners must honor the reservation unless a force majeure event occurs. Property owners should communicate any changes or cancellations to the guest in a timely manner.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Payments:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Property owners will receive payments for bookings via secure third-party payment gateways. The payment will be made after deducting Otithee.com’s commission and any applicable fees. Payments are typically processed within 15 business days of the guest’s check-in date, subject to the payment gateway’s policies.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Cancellations and Refunds:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Property owners are required to adhere to their own cancellation policies, which must be clearly communicated on their listing page. If a property owner cancels a booking, a full refund may be provided to the guest, depending on the provider’s policy.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">User-Generated Content:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Property owners must ensure that all photos, images, and descriptions uploaded to the website comply with Otithee.com’s guidelines. You must own the copyright or have permission to use the content, and you grant Otithee.com a license to use and promote this content for marketing purposes.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Liability and Responsibility:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Property owners are fully responsible for the safety, condition, and quality of their properties. Otithee.com is not responsible for any accidents, damages, or incidents that occur at the property. Property owners must maintain the necessary insurance for their properties and comply with all relevant local laws.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Dispute Resolution:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">In case of a dispute between a property owner and a guest, Otithee.com will try to mediate in good faith. However, Otithee.com is not liable for any direct or indirect damages caused by disputes between users and providers.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Service Standards:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Property owners agree to provide the service levels as described on Otithee.com, including timely responses to inquiries, maintaining cleanliness and safety standards, and providing the services as agreed upon.</p>
+        </div>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Common Terms for Both Users and Property Owners</h4>
+        <span class="text-base leading-7 font-bold">Privacy and Data Protection:</span>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee.com takes the privacy and security of its users and property owners seriously. All personal information, payment details, and other sensitive data are encrypted and stored securely. For more details, please refer to our Privacy Policy.</p>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Indemnity:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Both users and property owners agree to indemnify and hold harmless Otithee.com and its affiliates from any claims, damages, or liabilities arising out of the use of the platform, including violations of these Terms and Conditions.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Intellectual Property:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">All content on Otithee.com, including text, logos, images, and software, is the intellectual property of Otithee Limited unless otherwise specified. Users and property owners may not use, copy, or distribute the content without permission.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Amendments to Terms:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee.com reserves the right to update or change these Terms and Conditions at any time. Users and property owners will be notified of any major changes. Continued use of the platform implies acceptance of the revised terms.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Governing Law:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">These Terms and Conditions are governed by the laws of Bangladesh. Any disputes arising from the use of Otithee.com will be subject to the exclusive jurisdiction of the courts in Bangladesh unless the parties agree to resolve the matter through arbitration.</p>
+        </div>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Additional Terms for International Users & Property Owners</h4>
+        <span class="text-base leading-7 font-bold">International Transactions:</span>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">If you are booking or listing a property from outside Bangladesh, please be aware that your transactions may be subject to foreign exchange rates, international transaction fees, or additional charges imposed by payment providers (such as credit card companies or banks). These fees are beyond our control, and you are solely responsible for any extra costs incurred during the transaction process. We recommend checking with your financial institution for any additional charges before completing the booking.</p>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Language and Communication:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee.com primarily communicates in English, and all official correspondence, booking confirmations, and service-related messages will be sent in English. By using the website and app, you agree to receive communications in English or other supported languages available on the platform. While we strive to provide accessible communication in multiple languages, the official language for legal and contractual purposes remains English.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Third-Party Websites and Services:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee.com may contain links to third-party websites or services for your convenience, such as local transport providers, tourist attractions, or other relevant services. These external sites are not controlled, operated, or endorsed by Otithee.com, and we are not responsible for their content, privacy policies, or practices. We recommend that you review the privacy and terms of any third-party sites before providing any personal information or making bookings through them.</p>
+        </div>
+        <div class="mt-7">
+          <span class="text-base leading-7 font-bold">Travel Insurance and Health Coverage:</span>
+          <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee.com strongly advises all users and property owners to obtain comprehensive travel insurance, including health coverage, before embarking on any travel. Travel insurance provides protection against unexpected events such as cancellations, delays, medical emergencies, lost luggage, or trip interruptions. For property owners, we recommend ensuring that your property and guests are adequately covered by insurance in case of accidents or damages during a stay.</p>
+        </div>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Terms and conditions for becomming an Entrepreneur</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee Limited, renowned for its significant contributions to the technology and tourism industries, is committed to enhancing financial and social security across all communities. As part of its global mission, the company is fostering the development of a skilled workforce and empowering entrepreneurs worldwide. With this vision in mind:</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">I, the individual entering into this agreement with all administrative rules, business regulations, and guidelines of Otithee Limited, to earn commission as an "Entrepreneur" from Otithee Limited’s online booking platform, Otithee.com, which is based on an app and website for booking services such as hotels, resorts, convention halls, shared rooms, transport, and apartments.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Eligibility and Agreement</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">I am physically and mentally healthy, legally an adult, and a citizen of Bangladesh by birth or valid legal status. I have the legal right to enter into this online agreement.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Accuracy of Information</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">The name, address, ID number, and other information I have provided in this agreement are true and correct to the best of my knowledge. If any information provided by me is found to be false, distorted, or incorrect in the future, Otithee Limited reserves the right to cancel my entrepreneurial status without any explanation and take legal action.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Company's Rights and Guidelines</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee Limited retains the unconditional right to implement any procedures, regulations, rules, or policies it deems necessary for the smooth operation of the business. I will comply with these guidelines and will follow them without question.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Entrepreneur Status</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">In my business dealings with Otithee Limited, I will never be considered an employee of the company. Instead, I will voluntarily work as an independent entrepreneur, earning commission through service-related activities with honesty and dedication.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Knowledge and Promotion</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">An entrepreneur of Otithee.com must know online platforms, the internet, and various social media channels (e.g., Facebook, YouTube, WhatsApp, etc.). The entrepreneur must actively engage in promoting otithee.com’s services on these platforms ethically and reasonably.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Property Registration and User Encouragement</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Each entrepreneur must ensure new entrepreneur registrations and also register properties such as hotels, resorts, apartments, shared rooms, convention halls, and transport on Otithee.com. The entrepreneur is responsible for encouraging general users to make bookings for these properties.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Confidentiality</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">I will never disclose the business secrets or sources of Otithee Limited to competing companies or individuals. If I violate this rule, the company reserves the right to cancel my entrepreneurial status.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Discrepancies and Corrections</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">If I notice any discrepancies or irregularities related to my business activities or have any doubts, I will resolve the matter with the authorities within seven (7) days. I can consult with the authorized person from Otithee Limited regarding any corrections related to my commissions, incentives, or other matters.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Government Regulations</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">I agree to comply with any restrictions or new announcements by the Government of Bangladesh. If the company changes its rules, marketing plan, or policies due to government regulations or adjustments, I will be bound to accept these changes.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Voluntary Participation</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Becoming an entrepreneur of Otithee.com is entirely voluntary. I understand and have fully considered the terms and conditions outlined above. No one has coerced or pressured me into becoming an entrepreneur, and I provide my consent willingly.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Entrepreneur Account Fees</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee Limited charges a non-refundable fee for creating an entrepreneur account. This fee covers training, platform access, and other facilities necessary for operating as an entrepreneur. I understand and agree that this fee is non-refundable under any circumstances.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Commission Variability</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">I acknowledge and agree that the commission earned may vary from month to month depending on factors such as bookings, business conditions, and the company’s policies. The company reserves the right to adjust commission rates at its discretion, and I accept that my earnings may fluctuate accordingly.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Terms and conditions for becomming a Self-Reliant Entrepreneur</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">Otithee Limited, in addition to its significant contributions in the technology and tourism sectors, is also dedicated to providing financial and social security to individuals at all levels. As part of its broader vision, the company is committed to creating a skilled workforce and empowering entrepreneurs across the globe.</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">To support this mission, otithee.com offers a unique "Self-Reliant Entrepreneur Package" in addition to its tourism and IT services. This package is designed to provide aspiring entrepreneurs with the tools and resources they need to succeed.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Benefits of the Self-Reliant Entrepreneur Package</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">By purchasing the Self-Reliant Entrepreneur Package, you will gain direct membership to the Self-Reliant Entrepreneur Club and access to the following benefits:</p>
+        <ul class="p-2">
+          <li class="text-sm lg:text-base leading-6 lg:leading-7">ERP Software</li>
+          <li class="text-sm lg:text-base leading-6 lg:leading-7">A 4-night, 3-day tour from Dhaka to Cox’s Bazar and back</li>
+          <li class="text-sm lg:text-base leading-6 lg:leading-7">1 Domain Name of your choice</li>
+          <li class="text-sm lg:text-base leading-6 lg:leading-7">1 Business Page</li>
+          <li class="text-sm lg:text-base leading-6 lg:leading-7">A Certificate and ID Card</li>
+          <li class="text-sm lg:text-base leading-6 lg:leading-7">12 Training Sessions, which include 2 days of Entrepreneurial Training and 10 Online Freelancing Trainings</li>
+        </ul>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Important Terms and Conditions</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7"><span class="font-bold">Non-Refundable Package:</span> Once the package is purchased, it is non-refundable under any circumstances. Please ensure that you are fully committed before making your purchase.</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7"><span class="font-bold">ERP Software Delivery:</span> You will receive the ERP software delivery at least one month after confirming your preferred categories and customization from the demo software. If you have additional requirements, these can be discussed with our team, and an additional fee may apply.</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7"><span class="font-bold">Tour Details:</span> The company will inform you of the scheduled dates for the Dhaka-Cox’s Bazar-Dhaka tour. If you are unable to attend on the given dates, you will not be eligible to use this tour benefit in the future.</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7"><span class="font-bold">Domain Name Selection:</span> You will have the option to select a domain name based on availability at the time of purchase. Please ensure that your preferred domain is available before making your selection.</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7"><span class="font-bold">Hosting Costs:</span> The client will be responsible for covering all hosting costs associated with the ERP software. Our team will assist you in setting up the hosting and providing guidance on the installation process.</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7"><span class="font-bold">Training Completion:</span> You are required to complete all the training sessions within the specified time frame. Failure to do so will result in the loss of eligibility to claim these training benefits in the future.</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7"><span class="font-bold">Additional Support:</span> You will receive ongoing support and guidance through the Self-Reliant Entrepreneur Club to help you apply your learning and grow your entrepreneurial skills.</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7"><span class="font-bold">Package Modification:</span> Otithee Limited reserves the right to modify, alter, or discontinue the Self-Reliant Entrepreneur Package at any time. In such cases, any modifications will be communicated promptly.</p>
+        
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Acknowledgment and Agreement</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">By purchasing this package, you acknowledge and agree to all the terms and conditions outlined above. Otithee Limited is committed to providing you with the tools and knowledge to succeed, and we look forward to supporting your entrepreneurial journey.</p>
+      </div>
+      <div class=" mt-4 sm:mt-7.5">
+        <h4 class="text-xl lg:text-2xl leading-8.5 font-semibold">Contact Information</h4>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">If you have any questions regarding these Terms and Conditions or need assistance, please contact us:</p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">- Email: <a href="mailto:support@otithee.com">support@otithee.com</a></p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">- Phone: <a href="tel:+88 01810 093757">+88 01810 093757</a>, <a href="tel:+88 01810 093758">+88 01810 093758</a></p>
+        <p class="text-sm lg:text-base leading-6 lg:leading-7">- Address: Otithee Limited, Police Plaza Concord, Tower-1, Gulshan, Dhaka-1212, Bangladesh</p>
+      </div>
+    </div>
+  </section>
+  <!-- About Mehmaninn section end -->
+
+  <!-- Footer section start -->
+  <footer>
+    <div class="container">
+      <div class="grid md:grid-cols-12 pb-15">
+        <div class="md:col-span-4 pt-15 px-3.75">
+          <h5 class="mb-5">Contact Us</h5>
+          <div class="mt-7.5">
+            <h5>Customer Care</h5>
+            <div class="flex items-center gap-1 flex-wrap">
+              <a href="tel:+88 01810 093757" class="text-blue font-medium leading-5.75">+88 01810 093757</a>
+              <a href="tel: +88 01810 093758" class="text-blue font-medium leading-5.75"> +88 01810 093758</a>
+            </div>
+
+          </div>
+          <div class="mt-5">
+            <h5 class="leading-7.5">Address</h5>
+            <p class="text-blue font-medium leading-5.75">Police Plaza Concord, Tower-1, (8th & 10th Floor), Plot-02,
+              Road-144, Gulshan, Dhaka-1212</p>
+          </div>
+        </div>
+        <div class="md:col-span-2 pt-15 px-3.75">
+          <h5 class="mb-5">Quick Links</h5>
+          <ul>
+            <li><a href="/login.html" class="text-base leading-7.5 transition-all hover:text-blue">Log In</a></li>
+            <li><a href="/register.html" class="text-base leading-7.5 transition-all hover:text-blue">Register</a></li>
+            <li><a href="/about.html" class="text-base leading-7.5 transition-all hover:text-blue">About Us</a></li>
+            <li><a href="/payment.html" class="text-base leading-7.5 transition-all hover:text-blue">Payment</a></li>
+            <li><a href="/account-delete.html" class="text-base leading-7.5 transition-all hover:text-blue">Account
+                Delete</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 pt-15 px-3.75">
+          <h5 class="mb-5">Customer Care</h5>
+          <ul>
+            <li><a href="/contact.html" class="text-base leading-7.5 transition-all hover:text-blue">Contact</a></li>
+            <li><a href="/privacy-policy.html" class="text-base leading-7.5 transition-all hover:text-blue">Privacy
+                Policy</a></li>
+            <li><a href="/trems-conditions.html" class="text-base leading-7.5 transition-all hover:text-blue">Terms &
+                Conditions</a></li>
+            <li><a href="/faq.html" class="text-base leading-7.5 transition-all hover:text-blue">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 pt-15 px-3.75">
+          <h5 class="mb-5">Mobile</h5>
+          <div class="space-y-3">
+            <a href="#"
+              class="text-title border border-[#DDDDDD] rounded-2xl py-2.5 px-5 flex items-center gap-4 group">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24" height="24" x="0" y="0" viewBox="0 0 22.773 22.773"
+                  style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                  <g>
+                    <path
+                      d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zM20.67 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z"
+                      fill="currentcolor" opacity="1" data-original="currentcolor"
+                      class="transition-all group-hover:text-[#0a58ca]"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-sm leading-6.5 text-[#697488]">Download on the</span>
+                <span class="text-[15px] font-medium leading-4 transition-all group-hover:text-[#0a58ca]">App
+                  Store</span>
+              </div>
+            </a>
+            <a href="#"
+              class="text-title border border-[#DDDDDD] rounded-2xl py-2.5 px-5 flex items-center gap-4 group">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="24" height="24" x="0" y="0" viewBox="0 0 512.029 512.029"
+                  style="enable-background:new 0 0 512 512" xml:space="preserve"
+                  class="transition-all group-hover:text-[#0a58ca]">
+                  <g>
+                    <path
+                      d="M111.758 8.189c-20.032-11.072-43.552-10.816-63.456.16l233.28 215.2 78.368-78.368L111.758 8.189zM24.974 30.365c-5.696 9.312-8.96 19.968-8.96 31.264v388.672c0 10.944 2.976 21.376 8.352 30.496l234.592-234.592L24.974 30.365zM463.854 202.525l-74.752-41.248-84 83.968 102.944 94.944 55.84-30.816c20.096-11.136 32.128-31.104 32.128-53.44-.032-22.336-12.032-42.304-32.16-53.408zM282.478 267.901 47.246 503.133c10.208 5.824 21.408 8.896 32.672 8.896 10.88 0 21.824-2.752 31.84-8.288l266.784-147.232-96.064-88.608z"
+                      fill="currentcolor" opacity="1" data-original="currentcolor"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-sm leading-6.5 text-[#697488]">Get in on</span>
+                <span class="text-[15px] font-medium leading-4 transition-all group-hover:text-[#0a58ca]">Google
+                  Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-[#DDDDDD] py-5 flex items-center justify-between flex-wrap gap-5">
+        <div>
+          <p class="text-base leading-7.5">© 2026 Otithee.com All rights reserved.</p>
+        </div>
+        <div class="flex items-center">
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#1877F2"
+              style="color:#1877F2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" color="#FF0000"
+              style="color:#FF0000" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#fd1d1d"
+              style="color:#fd1d1d" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="px-2.5">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="#0077B5"
+              style="color:#0077B5" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
