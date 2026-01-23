@@ -348,3 +348,100 @@ navigation: {
       }
     });
   });
+
+  // FAQ
+document.querySelectorAll(".accordion-wrap").forEach(wrap => {
+  const button = wrap.querySelector(".accordion-button");
+  const content = wrap.querySelector(".accordion-contents");
+  const plus = wrap.querySelector(".plus-icon");
+  const minus = wrap.querySelector(".minus-icon");
+  const shadowClass = "shadow-[0_0_0_0.25rem_rgba(13,110,253,0.25)]";
+  const activeBgClass = "bg-[#052c65]";
+  const activeTextClass = "text-white";
+  button.addEventListener("click", () => {
+    const isOpen = content.classList.contains("content");
+
+    if (isOpen) {
+      content.style.maxHeight = content.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        content.classList.remove("content");
+        content.style.maxHeight = "0px";
+        button.classList.remove(shadowClass);
+        button.classList.remove(activeBgClass);
+        button.classList.remove(activeTextClass);
+      });
+
+      plus.classList.remove("hidden");
+      minus.classList.add("hidden");
+    } else {
+      // OPEN
+      content.classList.add("content");
+      content.style.maxHeight = content.scrollHeight + "px";
+
+      // add active classes
+      button.classList.add(shadowClass);
+      button.classList.add(activeBgClass);
+      button.classList.add(activeTextClass);
+
+      // after animation → auto height
+      content.addEventListener(
+        "transitionend",
+        function handler() {
+          content.style.maxHeight = "none";
+          content.removeEventListener("transitionend", handler);
+        }
+      );
+
+      plus.classList.add("hidden");
+      minus.classList.remove("hidden");
+    }
+  });
+});
+
+
+// Range slider
+  const minRange = document.getElementById("minRange");
+  const maxRange = document.getElementById("maxRange");
+  const minInput = document.getElementById("minInput");
+  const maxInput = document.getElementById("maxInput");
+  const rangeTrack = document.getElementById("rangeTrack");
+
+  const minGap = 100;
+
+  function updateRange() {
+    let minVal = parseInt(minRange.value);
+    let maxVal = parseInt(maxRange.value);
+
+    if (maxVal - minVal <= minGap) {
+      if (event.target === minRange) {
+        minRange.value = maxVal - minGap;
+      } else {
+        maxRange.value = minVal + minGap;
+      }
+    }
+
+    minInput.value = minRange.value;
+    maxInput.value = maxRange.value;
+
+    const minPercent = (minRange.value / minRange.max) * 100;
+    const maxPercent = (maxRange.value / maxRange.max) * 100;
+
+    rangeTrack.style.left = minPercent + "%";
+    rangeTrack.style.width = maxPercent - minPercent + "%";
+  }
+
+  minRange.addEventListener("input", updateRange);
+  maxRange.addEventListener("input", updateRange);
+
+  minInput.addEventListener("input", () => {
+    minRange.value = minInput.value;
+    updateRange();
+  });
+
+  maxInput.addEventListener("input", () => {
+    maxRange.value = maxInput.value;
+    updateRange();
+  });
+
+  updateRange();
+

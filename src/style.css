@@ -34,10 +34,10 @@
     @apply font-jost
   }
   h1{
-    @apply text-[25px] md:text-4xl lg:text-[40px] lg:leading-[1.45] font-semibold
+    @apply text-[25px] md:text-4xl lg:text-[40px] leading-10 lg:leading-14.5 font-semibold
   }
   h2{
-    @apply text-[26px] md:text-[28px] lg:text-3xl leading-10 lg:leading-11 font-semibold
+    @apply text-2xl md:text-[26px] lg:text-3xl md:leading-10 lg:leading-11 font-semibold
   }
   h3{
     @apply text-lg md:text-xl lg:text-[22px] lg:leading-8 font-medium
@@ -48,9 +48,20 @@
   h5{
     @apply text-base font-medium leading-6
   }
-
   body{
-    @apply text-xs font-normal font-jost leading-3.5 text-body
+      @apply text-xs font-normal font-jost leading-3.5 text-body
+    }
+}
+  
+@layer components {
+  /* closed state */
+  .accordion-contents {
+    @apply max-h-0 overflow-hidden opacity-0 transition-[max-height,opacity,transform] duration-500 ease-in-out translate-x-4;
+  }
+
+  /* open state */
+  .accordion-contents.content {
+    @apply opacity-100 translate-x-0 px-4;
   }
 }
 
@@ -102,3 +113,31 @@
 .swiper-button-prev{
   @apply left-4!
 }
+
+  .range-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    background: none;
+    pointer-events: none;
+  }
+
+  .range-input::-webkit-slider-thumb {
+    appearance: none;
+    height: 14px;
+    width: 14px;
+    background: #15803d;
+    border-radius: 9999px;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  .range-input::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    background: #15803d;
+    border-radius: 9999px;
+    cursor: pointer;
+    pointer-events: auto;
+  }
