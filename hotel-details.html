@@ -6,6 +6,9 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="./src/style.css">
   <title>Mehmaninn | Details</title>
 </head>
@@ -22,22 +25,28 @@
           </a>
           <div id="menu">
             <ul class="hidden lg:flex flex-wrap items-center ">
-              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#apartments" data-index="0"
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#apartments"
+                  data-index="0"
                   class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white menu-link">Apartments</a>
               </li>
-              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#hotels" data-index="1"
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#hotels"
+                  data-index="1"
                   class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white menu-link">Hotels</a>
               </li>
-              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#resorts" data-index="2"
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#resorts"
+                  data-index="2"
                   class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white menu-link">Resorts</a>
               </li>
-              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#shared-rooms" data-index="3"
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#shared-rooms"
+                  data-index="3"
                   class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white menu-link">Shared
                   Rooms</a></li>
-              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#convention-hall" data-index="4"
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a
+                  href="index.html#convention-hall" data-index="4"
                   class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white menu-link">Convention
                   Hall</a></li>
-              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#transports" data-index="5"
+              <li class="py-5 bg-transparent transition-all hover:bg-[#0a6847] group"><a href="index.html#transports"
+                  data-index="5"
                   class="text-[15px] font-semibold leading-7 px-2.5 text-[#0a6847] transition-all group-hover:text-white menu-link">Transports</a>
               </li>
             </ul>
@@ -161,7 +170,7 @@
   <section class="pt-7 lg:pt-22 pb-7 lg:pb-17.5 bg-[#E5F0FD]">
     <div class="container">
       <div class="space-y-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-2 bg-white p-2 rounded-xl">
+        <!-- <div class="grid grid-cols-1 md:grid-cols-12 gap-2 bg-white p-2 rounded-xl">
           <div class="md:col-span-8">
             <div class="h-full">
               <img src="/assets/logo/spring-hil.webp" alt="thumbnail-image"
@@ -195,7 +204,55 @@
               </div>
             </div>
           </div>
+        </div> -->
+
+        <div class="arch-slider grid grid-cols-1 md:grid-cols-12 gap-2 p-2 rounded-xl bg-white">
+          <div class="md:col-span-8 arch-slider-item">
+            <div class="h-full">
+              <a href="/assets/logo/spring-hil.webp" class="arc-link">
+                <img src="/assets/logo/spring-hil.webp" alt="thumbnail-image"
+                  class="w-full h-full rounded-lg object-cover" />
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-4 grid grid-cols-2 gap-2 arch-slider-item">
+            <div class="relative h-full">
+              <a href="/assets/logo/spring-hil.webp" class="arc-link">
+                <img src="/assets/logo/spring-hil.webp" alt="Gallery Image"
+                  class="w-full h-full rounded-lg object-cover" />
+              </a>
+            </div>
+            <div class="relative h-full">
+              <a href="/assets/image/spring-table.jpg" class="arc-link">
+                <img src="/assets/image/spring-table.jpg" alt="Gallery Image" loading="lazy"
+                  class="w-full h-full rounded-lg object-cover" />
+              </a>
+            </div>
+            <div class="relative h-full">
+              <a href="/assets/image/exercise.jpg" class="arc-link">
+                <img src="/assets/image/exercise.jpg" alt="Gallery Image" loading="lazy"
+                  class="w-full h-full rounded-lg object-cover" />
+              </a>
+            </div>
+            <div class="relative h-full">
+              <a href="/assets/image/hotel-ac.jpg" class="arc-link">
+                <img src="/assets/image/hotel-ac.jpg" alt="Gallery Image" loading="lazy"
+                  class="w-full h-full rounded-lg object-cover" />
+              </a>
+              <div class="absolute inset-0 flex items-end justify-center bg-black/30 rounded-lg">
+                <button
+                  class="mb-4 px-6 py-2 bg-white text-title hover:bg-blue hover:text-white transition-all text-sm font-medium rounded shadow"
+                  data-gallery="gallery2">
+                  See All Photos
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+
+
+
+
         <div class="bg-white p-4 rounded-md">
           <h2>Spring Hill Apartments</h2>
           <div class="flex justify-between gap-6 mt-2">
@@ -247,8 +304,7 @@
           </div>
           <div class="mt-4 space-y-7">
 
-            <div
-              class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
 
               <div class="md:col-span-3">
                 <div class="max-h-50 h-full">
@@ -281,7 +337,6 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mt-5">
 
                   <div class="md:col-span-8 space-y-2 text-sm">
-
                     <div class="flex items-center gap-2">
                       <span class="text-[#198754]">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512"
@@ -322,8 +377,8 @@
                     </div>
 
                     <div class="flex gap-4 p-2">
-                      <button class="text-blue text-sm font-medium">View Details</button>
-                      <button class="text-blue text-sm font-medium">Cancel Policy</button>
+                      <button class="viewButton text-blue text-sm font-medium">View Details</button>
+                      <button class="viewCancel text-blue text-sm font-medium">Cancel Policy</button>
                     </div>
                   </div>
                   <div class="md:col-span-4 text-right">
@@ -356,11 +411,440 @@
                 </div>
               </div>
             </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+
+              <div class="md:col-span-3">
+                <div class="max-h-50 h-full">
+                  <img
+                    src="https://otithee.sgp1.cdn.digitaloceanspaces.com/uploads/images/hotelroom/1716372880-19235896.jpg"
+                    alt="Hotel Room" class="w-full h-full object-cover rounded-l-md" />
+                </div>
+
+                <div class="flex mt-2 gap-2 max-h-15 h-full">
+                  <div>
+                    <img
+                      src="https://otithee.sgp1.cdn.digitaloceanspaces.com/public/gallery/1747292213_68259035266fb.webp"
+                      alt="" class="w-full h-full object-cover rounded" />
+                  </div>
+                </div>
+              </div>
+              <div class="md:col-span-9">
+                <h3>Deluxe Room Double</h3>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Wifi</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Parking</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Restaurant</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Room Service</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">24-hour front desk</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Television</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Air conditioning</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Lift</span>
+                  <button type="button" class="text-sm text-[#387f39] cursor-pointer">SHOW ALL</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mt-5">
+
+                  <div class="md:col-span-8 space-y-2 text-sm">
+                    <div class="flex items-center gap-2">
+                      <span class="text-[#198754]">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512"
+                          color="#0A6847" height="16" width="16" xmlns="http://www.w3.org/2000/svg"
+                          style="color: rgb(10, 104, 71);">
+                          <path
+                            d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z">
+                          </path>
+                        </svg>
+                      </span>
+                      <span>2 Adult, 2 Child</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <span class="text-[#198754]">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                          color="#0A6847" height="16" width="16" xmlns="http://www.w3.org/2000/svg"
+                          style="color: rgb(10, 104, 71);">
+                          <path
+                            d="M432 230.7a79.44 79.44 0 0 0-32-6.7H112a79.51 79.51 0 0 0-32 6.69A80.09 80.09 0 0 0 32 304v112a16 16 0 0 0 32 0v-8a8.1 8.1 0 0 1 8-8h368a8.1 8.1 0 0 1 8 8v8a16 16 0 0 0 32 0V304a80.09 80.09 0 0 0-48-73.3zM376 80H136a56 56 0 0 0-56 56v72a4 4 0 0 0 5.11 3.84A95.5 95.5 0 0 1 112 208h4.23a4 4 0 0 0 4-3.55A32 32 0 0 1 152 176h56a32 32 0 0 1 31.8 28.45 4 4 0 0 0 4 3.55h24.46a4 4 0 0 0 4-3.55A32 32 0 0 1 304 176h56a32 32 0 0 1 31.8 28.45 4 4 0 0 0 4 3.55h4.2a95.51 95.51 0 0 1 26.89 3.85A4 4 0 0 0 432 208v-72a56 56 0 0 0-56-56z">
+                          </path>
+                        </svg>
+                      </span>
+                      <span>5 Rooms Available</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <span class="text-[#198754]">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                          color="#0A6847" height="16" width="16" xmlns="http://www.w3.org/2000/svg"
+                          style="color: rgb(10, 104, 71);">
+                          <path
+                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z">
+                          </path>
+                        </svg>
+                      </span>
+                      <span>1 extra-large double bed. Featuring free toiletries...</span>
+                    </div>
+
+                    <div class="flex gap-4 p-2">
+                      <button class="viewButton text-blue text-sm font-medium">View Details</button>
+                      <button class="viewCancel text-blue text-sm font-medium">Cancel Policy</button>
+                    </div>
+                  </div>
+                  <div class="md:col-span-4 text-right">
+                    <small class="text-sm">Price per night as low as</small>
+
+                    <p class="text-sm line-through text-[#697488] mt-1">
+                      ৳42,768 / 2 nights
+                    </p>
+
+                    <p class="text-lg font-semibold text-[#697488] mt-2">
+                      ৳13,068 / 2 nights
+                    </p>
+
+                    <p class="text-sm text-[#198754] font-medium mt-1">
+                      Save ৳29,700
+                    </p>
+
+                    <p class="text-sm mt-1">*Price includes VAT & Tax </p>
+
+                    <a href="/login.html"
+                      class="mt-3 w-full px-6 py-5 text-[15px] leading-4.5 font-medium bg-blue text-white rounded-sm transition-all hover:bg-title inline-flex items-center justify-center">
+                      Reserve
+                    </a>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center gap-2 mt-4 text-sm">
+                  <label>Rooms:</label>
+                  <input type="number" min="1" max="5" value="1" class="w-15 border rounded text-center py-1" />
+                  <span class="text-gray-400 text-xs">of 5 available</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+
+              <div class="md:col-span-3">
+                <div class="max-h-50 h-full">
+                  <img
+                    src="https://otithee.sgp1.cdn.digitaloceanspaces.com/uploads/images/hotelroom/1716372880-19235896.jpg"
+                    alt="Hotel Room" class="w-full h-full object-cover rounded-l-md" />
+                </div>
+
+                <div class="flex mt-2 gap-2 max-h-15 h-full">
+                  <div>
+                    <img
+                      src="https://otithee.sgp1.cdn.digitaloceanspaces.com/public/gallery/1747292213_68259035266fb.webp"
+                      alt="" class="w-full h-full object-cover rounded" />
+                  </div>
+                </div>
+              </div>
+              <div class="md:col-span-9">
+                <h3>Deluxe Room Double</h3>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Wifi</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Parking</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Restaurant</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Room Service</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">24-hour front desk</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Television</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Air conditioning</span>
+                  <span class="bg-[#198754] text-white text-xs px-2 py-0.5 rounded-full">Lift</span>
+                  <button type="button" class="text-sm text-[#387f39] cursor-pointer">SHOW ALL</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mt-5">
+
+                  <div class="md:col-span-8 space-y-2 text-sm">
+                    <div class="flex items-center gap-2">
+                      <span class="text-[#198754]">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512"
+                          color="#0A6847" height="16" width="16" xmlns="http://www.w3.org/2000/svg"
+                          style="color: rgb(10, 104, 71);">
+                          <path
+                            d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z">
+                          </path>
+                        </svg>
+                      </span>
+                      <span>2 Adult, 2 Child</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <span class="text-[#198754]">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                          color="#0A6847" height="16" width="16" xmlns="http://www.w3.org/2000/svg"
+                          style="color: rgb(10, 104, 71);">
+                          <path
+                            d="M432 230.7a79.44 79.44 0 0 0-32-6.7H112a79.51 79.51 0 0 0-32 6.69A80.09 80.09 0 0 0 32 304v112a16 16 0 0 0 32 0v-8a8.1 8.1 0 0 1 8-8h368a8.1 8.1 0 0 1 8 8v8a16 16 0 0 0 32 0V304a80.09 80.09 0 0 0-48-73.3zM376 80H136a56 56 0 0 0-56 56v72a4 4 0 0 0 5.11 3.84A95.5 95.5 0 0 1 112 208h4.23a4 4 0 0 0 4-3.55A32 32 0 0 1 152 176h56a32 32 0 0 1 31.8 28.45 4 4 0 0 0 4 3.55h24.46a4 4 0 0 0 4-3.55A32 32 0 0 1 304 176h56a32 32 0 0 1 31.8 28.45 4 4 0 0 0 4 3.55h4.2a95.51 95.51 0 0 1 26.89 3.85A4 4 0 0 0 432 208v-72a56 56 0 0 0-56-56z">
+                          </path>
+                        </svg>
+                      </span>
+                      <span>5 Rooms Available</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <span class="text-[#198754]">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                          color="#0A6847" height="16" width="16" xmlns="http://www.w3.org/2000/svg"
+                          style="color: rgb(10, 104, 71);">
+                          <path
+                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z">
+                          </path>
+                        </svg>
+                      </span>
+                      <span>1 extra-large double bed. Featuring free toiletries...</span>
+                    </div>
+
+                    <div class="flex gap-4 p-2">
+                      <button class="viewButton text-blue text-sm font-medium">View Details</button>
+                      <button class="viewCancel text-blue text-sm font-medium">Cancel Policy</button>
+                    </div>
+                  </div>
+                  <div class="md:col-span-4 text-right">
+                    <small class="text-sm">Price per night as low as</small>
+
+                    <p class="text-sm line-through text-[#697488] mt-1">
+                      ৳42,768 / 2 nights
+                    </p>
+
+                    <p class="text-lg font-semibold text-[#697488] mt-2">
+                      ৳13,068 / 2 nights
+                    </p>
+
+                    <p class="text-sm text-[#198754] font-medium mt-1">
+                      Save ৳29,700
+                    </p>
+
+                    <p class="text-sm mt-1">*Price includes VAT & Tax </p>
+
+                    <a href="/login.html"
+                      class="mt-3 w-full px-6 py-5 text-[15px] leading-4.5 font-medium bg-blue text-white rounded-sm transition-all hover:bg-title inline-flex items-center justify-center">
+                      Reserve
+                    </a>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center gap-2 mt-4 text-sm">
+                  <label>Rooms:</label>
+                  <input type="number" min="1" max="5" value="1" class="w-15 border rounded text-center py-1" />
+                  <span class="text-gray-400 text-xs">of 5 available</span>
+                </div>
+              </div>
+            </div>
+            <div class=" rounded-lg p-4 bg-white shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+              <div>
+                <h3>Overview</h3>
+                <p class="text-base leading-7.5 mt-8">Discover a world of contemporary elegance in our thoughtfully
+                  designed rooms and suites. Immerse yourself in comfort with plush bedding, and stay connected with
+                  complimentary Wi-Fi and a smart TV. Modern amenities, a well-stocked mini-bar, and a luxurious
+                  bathroom enhance your stay. Plus, enjoy the convenience of 24-hour room service, ensuring your needs
+                  are met anytime you desire.</p>
+              </div>
+            </div>
+            <div class=" rounded-lg p-4 bg-white shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+              <div>
+                <h3>Amenities of the Hotel</h3>
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-7 mt-7">
+                  <div
+                    class="flex items-center gap-3 p-4 bg-[#e8fced] rounded-md shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+                    <span class="w-5 h-5 text-[#118B50]">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        color="#118B50" xmlns="http://www.w3.org/2000/svg" style="color: rgb(17, 139, 80);">
+                        <path
+                          d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z">
+                        </path>
+                      </svg>
+                    </span>
+                    <span class="text-[15px] font-semibold text-title">Bedrooms 3</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 bg-[#e8fced] rounded-md shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+                    <span class="w-5 h-5 text-[#118B50]">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        color="#118B50" xmlns="http://www.w3.org/2000/svg" style="color: rgb(17, 139, 80);">
+                        <path
+                          d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z">
+                        </path>
+                      </svg>
+                    </span>
+                    <span class="text-[15px] font-semibold text-title">Swimming pool</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 bg-[#e8fced] rounded-md shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+                    <span class="w-5 h-5 text-[#118B50]">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        color="#118B50" xmlns="http://www.w3.org/2000/svg" style="color: rgb(17, 139, 80);">
+                        <path
+                          d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z">
+                        </path>
+                      </svg>
+                    </span>
+                    <span class="text-[15px] font-semibold text-title">Wifi</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 bg-[#e8fced] rounded-md shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+                    <span class="w-5 h-5 text-[#118B50]">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        color="#118B50" xmlns="http://www.w3.org/2000/svg" style="color: rgb(17, 139, 80);">
+                        <path
+                          d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z">
+                        </path>
+                      </svg>
+                    </span>
+                    <span class="text-[15px] font-semibold text-title">Parking</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 bg-[#e8fced] rounded-md shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+                    <span class="w-5 h-5 text-[#118B50]">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        color="#118B50" xmlns="http://www.w3.org/2000/svg" style="color: rgb(17, 139, 80);">
+                        <path
+                          d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z">
+                        </path>
+                      </svg>
+                    </span>
+                    <span class="text-[15px] font-semibold text-title">Parking</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 p-4 bg-[#e8fced] rounded-md shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+                    <span class="w-5 h-5 text-[#118B50]">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        color="#118B50" xmlns="http://www.w3.org/2000/svg" style="color: rgb(17, 139, 80);">
+                        <path
+                          d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z">
+                        </path>
+                      </svg>
+                    </span>
+                    <span class="text-[15px] font-semibold text-title">Parking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" rounded-lg p-4 bg-white shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+              <div>
+                <h3>Cancel Policy</h3>
+                <p class="text-base leading-7.5 mt-8"></p>
+              </div>
+            </div>
+            <div class=" rounded-lg p-4 bg-white shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+              <div>
+                <h3>Guest Reviews</h3>
+                <p class="text-base leading-7.5 mt-8"></p>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
   </section>
+
+<div id="view" class="fixed inset-0 z-70 w-full bg-black/40 overflow-auto hidden">
+  <div class="flex items-center justify-center mt-10 mb-10 px-4">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-200 mx-auto py-4 h-[80%]">
+      <div class="flex justify-between items-center border-b border-black/15 pb-4 px-6">
+        <h2 class="text-2xl font-semibold">Deluxe King</h2>
+        <button type="button" class="closeButton text-black/60 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg"
+            version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 329.269 329"
+            style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-4 h-4">
+            <g>
+              <path
+                d="M194.8 164.77 323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0"
+                fill="currentcolor" opacity="1" data-original="currentcolor" class=""></path>
+            </g>
+          </svg></button>
+      </div>
+      <div class="mt-4 space-y-6 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="flex items-center text-gray-700 text-base">
+            <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
+              <path
+                d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+            </svg>
+            1 Bed
+          </div>
+          <div class="flex items-center text-gray-700 text-base">
+            <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
+              <path
+                d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
+            </svg>
+            2 Persons
+          </div>
+          <div class="flex items-center text-gray-700 text-base">
+            <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
+              <path
+                d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+            </svg>
+            20 Rooms Available
+          </div>
+        </div>
+        <div class="flex items-center text-sm text-gray-600 mt-2">
+          <svg class="w-4 h-4 mr-2 text-green-700" fill="currentColor" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+          </svg>
+          <span class="bg-[#0a6847] text-xs text-white px-2 py-0.5 rounded-lg">Experience The Extraordinary</span>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium pt-2">Overview</h3>
+          <p class="text-[#697488] text-base mt-3">This room has 1 king size room. 2 people can stay in this room. It's
+            a
+            5 star hotel so you will get all the facilities.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium pt-2">Amenities of the Deluxe King</h3>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium pt-3">Daily Pricing Details</h3>
+          <div class="overflow-x-auto mt-4 rounded-lg">
+            <table class="min-w-full text-sm text-left">
+              <thead class="bg-gray-800 text-white rounded-2xl">
+                <tr>
+                  <th class="px-10 py-6">Date</th>
+                  <th class="px-10 py-6">Day</th>
+                  <th class="px-10 py-6">Base Price</th>
+                  <th class="px-10 py-6">Special Price</th>
+                  <th class="px-10 py-6">Savings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class=" odd:bg-gray-100 even:bg-white">
+                  <td class="px-10 py-5">2026-01-24</td>
+                  <td class="px-10 py-5 capitalize">Saturday</td>
+                  <td class="px-10 py-5">৳18,562.5</td>
+                  <td class="px-10 py-5 text-green-600 font-semibold">৳13,612.5</td>
+                  <td class="px-10 py-5 text-green-600 font-semibold">৳4,950</td>
+                </tr>
+                <tr class=" odd:bg-gray-100 even:bg-white">
+                  <td class="px-10 py-5">2026-01-25</td>
+                  <td class="px-10 py-5 capitalize">Sunday</td>
+                  <td class="px-10 py-5">৳18,562.5</td>
+                  <td class="px-10 py-5 text-green-600 font-semibold">৳13,612.5</td>
+                  <td class="px-10 py-5 text-green-600 font-semibold">৳4,950</td>
+                </tr>
+              </tbody>
+              <tfoot class="bg-gray-100 font-semibold">
+                <tr>
+                  <td colspan="2" class="px-10 py-5">Total for 2 nights:</td>
+                  <td class="px-10 py-5">৳37,125</td>
+                  <td class="px-10 py-5 text-green-600">৳27,225</td>
+                  <td class="px-10 py-5 text-green-600">৳9,900</td>
+                </tr>
+                <tr class="bg-blue-100 font-bold">
+                  <td colspan="4" class="px-10 py-5">Final Total (with charges):</td>
+                  <td class="px-10 py-5">৳27,225</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium pt-5">Cancel Policy</h3>
+        </div>
+      </div>
+      <div class="flex justify-end mt-6 space-x-3 border-t border-black/15 pt-4 px-4">
+        <button type="button" class="px-4 py-2 bg-gray-300 text-base leading-6 rounded-md transition-all hover:bg-gray-400 cursor-pointer">Close</button>
+        <button type="button"
+          class="px-4 py-2 bg-blue text-base leading-6 text-white rounded-md transition-all hover:bg-blue-900 cursor-pointer">Reserve</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Filter section end -->
 
   <!-- Footer section start -->
@@ -495,7 +979,35 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./node_modules/preline/dist/preline.js"></script>
+  <!-- Include jQuery, Slick, and Slick Lightbox JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-lightbox@0.2.12/dist/slick-lightbox.min.js"></script>
   <script type="module" src="/src/main.js"></script>
+  <script>
+  const viewButtons = document.querySelectorAll(".viewButton");
+const viewCancels = document.querySelectorAll(".viewCancel");
+const closeButtons = document.querySelectorAll(".closeButton"); 
+const view = document.getElementById("view");
+
+viewButtons.forEach(btn => {
+btn.addEventListener("click", () => {
+view.classList.remove("hidden");
+});
+});
+
+closeButtons.forEach(btn => {
+btn.addEventListener("click", () => {
+view.classList.add("hidden");
+});
+});
+
+viewCancels.forEach(btn => {
+btn.addEventListener("click", () => {
+view.classList.remove("hidden");
+});
+});
+  </script>
 </body>
 
 </html>
