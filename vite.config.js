@@ -22,6 +22,8 @@ export default defineConfig({
             hotelDetails: resolve(__dirname, 'hotel-details.html'),
             package: resolve(__dirname, 'package-details.html'),
             apartmentsDetails: resolve(__dirname, 'apartments-details.html'),
+            convention: resolve(__dirname, 'convention-hall.html'),
+            sharedRooms: resolve(__dirname, 'shared-rooms-details.html'),
           },
         },
       },
