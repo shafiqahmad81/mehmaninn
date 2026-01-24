@@ -5,10 +5,8 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="./src/style.css">
   <title>Mehmaninn | Details</title>
 </head>
@@ -170,30 +168,36 @@
   <section class="pt-7 lg:pt-22 pb-7 lg:pb-17.5 bg-[#E5F0FD]">
     <div class="container">
       <div class="space-y-8">
-        <!-- <div class="grid grid-cols-1 md:grid-cols-12 gap-2 bg-white p-2 rounded-xl">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-2 bg-white p-2 rounded-xl">
           <div class="md:col-span-8">
             <div class="h-full">
-              <img src="/assets/logo/spring-hil.webp" alt="thumbnail-image"
-                class="w-full h-full rounded-lg object-cover" />
+              <a href="/assets/logo/spring-hil.webp" data-fancybox="gallery"
+                data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code">
+                <img class="w-full h-full" src="/assets/logo/spring-hil.webp" width="200" height="150" alt="Sample image #1" />
+              </a>
             </div>
           </div>
           <div class="md:col-span-4">
             <div class="grid grid-cols-2 gap-2 h-full">
               <div class="relative h-full">
-                <img src="/assets/logo/spring-hil.webp" alt="Gallery Image"
-                  class="w-full h-full rounded-lg object-cover" />
+                <a href="/assets/logo/spring-hil.webp" data-fancybox="gallery">
+                  <img class="w-full h-full" src="/assets/logo/spring-hil.webp" width="200" height="150" alt="Sample image #2" />
+                </a>
               </div>
               <div class="relative h-full">
-                <img src="/assets/image/spring-table.jpg" alt="Gallery Image" loading="lazy"
-                  class="w-full h-full rounded-lg object-cover" />
+                <a href="/assets/image/spring-table.jpg" data-fancybox="gallery">
+                  <img class="w-full h-full" src="/assets/image/spring-table.jpg" width="200" height="150" alt="Sample image #3" />
+                </a>
               </div>
               <div class="relative h-full">
-                <img src="/assets/image/exercise.jpg" alt="Gallery Image" loading="lazy"
-                  class="w-full h-full rounded-lg object-cover" />
+                <a href="/assets/image/exercise.jpg" data-fancybox="gallery">
+                  <img class="w-full h-full" src="/assets/image/exercise.jpg" width="200" height="150" alt="Sample image #3" />
+                </a>
               </div>
               <div class="relative h-full">
-                <img src="/assets/image/hotel-ac.jpg" alt="Gallery Image" loading="lazy"
-                  class="w-full h-full rounded-lg object-cover" />
+                <a href="/assets/image/exercise.jpg" data-fancybox="gallery">
+                  <img class="w-full h-full" src="/assets/image/exercise.jpg" width="200" height="150" alt="Sample image #3" />
+                </a>
                 <div class="absolute inset-0 flex items-end justify-center bg-black/30 rounded-lg">
                   <button
                     class="mb-4 px-6 py-2 bg-white text-title hover:bg-blue hover:text-white transition-all text-sm font-medium rounded shadow"
@@ -204,51 +208,36 @@
               </div>
             </div>
           </div>
-        </div> -->
-
-        <div class="arch-slider grid grid-cols-1 md:grid-cols-12 gap-2 p-2 rounded-xl bg-white">
-          <div class="md:col-span-8 arch-slider-item">
-            <div class="h-full">
-              <a href="/assets/logo/spring-hil.webp" class="arc-link">
-                <img src="/assets/logo/spring-hil.webp" alt="thumbnail-image"
-                  class="w-full h-full rounded-lg object-cover" />
-              </a>
-            </div>
-          </div>
-          <div class="md:col-span-4 grid grid-cols-2 gap-2 arch-slider-item">
-            <div class="relative h-full">
-              <a href="/assets/logo/spring-hil.webp" class="arc-link">
-                <img src="/assets/logo/spring-hil.webp" alt="Gallery Image"
-                  class="w-full h-full rounded-lg object-cover" />
-              </a>
-            </div>
-            <div class="relative h-full">
-              <a href="/assets/image/spring-table.jpg" class="arc-link">
-                <img src="/assets/image/spring-table.jpg" alt="Gallery Image" loading="lazy"
-                  class="w-full h-full rounded-lg object-cover" />
-              </a>
-            </div>
-            <div class="relative h-full">
-              <a href="/assets/image/exercise.jpg" class="arc-link">
-                <img src="/assets/image/exercise.jpg" alt="Gallery Image" loading="lazy"
-                  class="w-full h-full rounded-lg object-cover" />
-              </a>
-            </div>
-            <div class="relative h-full">
-              <a href="/assets/image/hotel-ac.jpg" class="arc-link">
-                <img src="/assets/image/hotel-ac.jpg" alt="Gallery Image" loading="lazy"
-                  class="w-full h-full rounded-lg object-cover" />
-              </a>
-              <div class="absolute inset-0 flex items-end justify-center bg-black/30 rounded-lg">
-                <button
-                  class="mb-4 px-6 py-2 bg-white text-title hover:bg-blue hover:text-white transition-all text-sm font-medium rounded shadow"
-                  data-gallery="gallery2">
-                  See All Photos
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
+
+        <!-- <a
+  href="https://lipsum.app/id/1/1600x1200"
+  data-fancybox="gallery"
+  data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"
+>
+  <img
+    src="https://lipsum.app/id/1/200x150"
+    width="200"
+    height="150"
+    alt="Sample image #1"
+  />
+</a>
+<a href="https://lipsum.app/id/2/1600x1200" data-fancybox="gallery">
+  <img
+    src="https://lipsum.app/id/2/200x150"
+    width="200"
+    height="150"
+    alt="Sample image #2"
+  />
+</a>
+<a href="https://lipsum.app/id/3/1600x1200" data-fancybox="gallery">
+  <img
+    src="https://lipsum.app/id/3/200x150"
+    width="200"
+    height="150"
+    alt="Sample image #3"
+  />
+</a> -->
 
 
 
@@ -304,7 +293,8 @@
           </div>
           <div class="mt-4 space-y-7">
 
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
 
               <div class="md:col-span-3">
                 <div class="max-h-50 h-full">
@@ -411,7 +401,8 @@
                 </div>
               </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
 
               <div class="md:col-span-3">
                 <div class="max-h-50 h-full">
@@ -518,7 +509,8 @@
                 </div>
               </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-4 rounded-lg p-4 bg-white overflow-hidden shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)]">
 
               <div class="md:col-span-3">
                 <div class="max-h-50 h-full">
@@ -733,118 +725,120 @@
     </div>
   </section>
 
-<div id="view" class="fixed inset-0 z-70 w-full bg-black/40 overflow-auto hidden">
-  <div class="flex items-center justify-center mt-10 mb-10 px-4">
-    <div class="bg-white rounded-xl shadow-lg w-full max-w-200 mx-auto py-4 h-[80%]">
-      <div class="flex justify-between items-center border-b border-black/15 pb-4 px-6">
-        <h2 class="text-2xl font-semibold">Deluxe King</h2>
-        <button type="button" class="closeButton text-black/60 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg"
-            version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 329.269 329"
-            style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-4 h-4">
-            <g>
+  <div id="view" class="fixed inset-0 z-70 w-full bg-black/40 overflow-auto hidden">
+    <div class="flex items-center justify-center mt-10 mb-10 px-4">
+      <div class="bg-white rounded-xl shadow-lg w-full max-w-200 mx-auto py-4 h-[80%]">
+        <div class="flex justify-between items-center border-b border-black/15 pb-4 px-6">
+          <h2 class="text-2xl font-semibold">Deluxe King</h2>
+          <button type="button" class="closeButton text-black/60 cursor-pointer "><svg
+              xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
+              viewBox="0 0 329.269 329" style="enable-background:new 0 0 512 512" xml:space="preserve" class="w-4 h-4">
+              <g>
+                <path
+                  d="M194.8 164.77 323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0"
+                  fill="currentcolor" opacity="1" data-original="currentcolor" class=""></path>
+              </g>
+            </svg></button>
+        </div>
+        <div class="mt-4 space-y-6 px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="flex items-center text-gray-700 text-base">
+              <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
+                <path
+                  d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+              </svg>
+              1 Bed
+            </div>
+            <div class="flex items-center text-gray-700 text-base">
+              <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
+                <path
+                  d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
+              </svg>
+              2 Persons
+            </div>
+            <div class="flex items-center text-gray-700 text-base">
+              <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
+                <path
+                  d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+              </svg>
+              20 Rooms Available
+            </div>
+          </div>
+          <div class="flex items-center text-sm text-gray-600 mt-2">
+            <svg class="w-4 h-4 mr-2 text-green-700" fill="currentColor" viewBox="0 0 24 24">
+              <path fill="none" d="M0 0h24v24H0z" />
               <path
-                d="M194.8 164.77 323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0"
-                fill="currentcolor" opacity="1" data-original="currentcolor" class=""></path>
-            </g>
-          </svg></button>
-      </div>
-      <div class="mt-4 space-y-6 px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="flex items-center text-gray-700 text-base">
-            <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
-              <path
-                d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+                d="m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
             </svg>
-            1 Bed
+            <span class="bg-[#0a6847] text-xs text-white px-2 py-0.5 rounded-lg">Experience The Extraordinary</span>
           </div>
-          <div class="flex items-center text-gray-700 text-base">
-            <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
-              <path
-                d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
-            </svg>
-            2 Persons
+          <div>
+            <h3 class="text-xl font-medium pt-2">Overview</h3>
+            <p class="text-[#697488] text-base mt-3">This room has 1 king size room. 2 people can stay in this room.
+              It's
+              a
+              5 star hotel so you will get all the facilities.</p>
           </div>
-          <div class="flex items-center text-gray-700 text-base">
-            <svg class="w-5 h-5 mr-2 text-green-700" fill="currentColor" viewBox="0 0 640 512">
-              <path
-                d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
-            </svg>
-            20 Rooms Available
+          <div>
+            <h3 class="text-xl font-medium pt-2">Amenities of the Deluxe King</h3>
           </div>
-        </div>
-        <div class="flex items-center text-sm text-gray-600 mt-2">
-          <svg class="w-4 h-4 mr-2 text-green-700" fill="currentColor" viewBox="0 0 24 24">
-            <path fill="none" d="M0 0h24v24H0z" />
-            <path
-              d="m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
-          </svg>
-          <span class="bg-[#0a6847] text-xs text-white px-2 py-0.5 rounded-lg">Experience The Extraordinary</span>
-        </div>
-        <div>
-          <h3 class="text-xl font-medium pt-2">Overview</h3>
-          <p class="text-[#697488] text-base mt-3">This room has 1 king size room. 2 people can stay in this room. It's
-            a
-            5 star hotel so you will get all the facilities.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-medium pt-2">Amenities of the Deluxe King</h3>
-        </div>
-        <div>
-          <h3 class="text-xl font-medium pt-3">Daily Pricing Details</h3>
-          <div class="overflow-x-auto mt-4 rounded-lg">
-            <table class="min-w-full text-sm text-left">
-              <thead class="bg-gray-800 text-white rounded-2xl">
-                <tr>
-                  <th class="px-10 py-6">Date</th>
-                  <th class="px-10 py-6">Day</th>
-                  <th class="px-10 py-6">Base Price</th>
-                  <th class="px-10 py-6">Special Price</th>
-                  <th class="px-10 py-6">Savings</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class=" odd:bg-gray-100 even:bg-white">
-                  <td class="px-10 py-5">2026-01-24</td>
-                  <td class="px-10 py-5 capitalize">Saturday</td>
-                  <td class="px-10 py-5">৳18,562.5</td>
-                  <td class="px-10 py-5 text-green-600 font-semibold">৳13,612.5</td>
-                  <td class="px-10 py-5 text-green-600 font-semibold">৳4,950</td>
-                </tr>
-                <tr class=" odd:bg-gray-100 even:bg-white">
-                  <td class="px-10 py-5">2026-01-25</td>
-                  <td class="px-10 py-5 capitalize">Sunday</td>
-                  <td class="px-10 py-5">৳18,562.5</td>
-                  <td class="px-10 py-5 text-green-600 font-semibold">৳13,612.5</td>
-                  <td class="px-10 py-5 text-green-600 font-semibold">৳4,950</td>
-                </tr>
-              </tbody>
-              <tfoot class="bg-gray-100 font-semibold">
-                <tr>
-                  <td colspan="2" class="px-10 py-5">Total for 2 nights:</td>
-                  <td class="px-10 py-5">৳37,125</td>
-                  <td class="px-10 py-5 text-green-600">৳27,225</td>
-                  <td class="px-10 py-5 text-green-600">৳9,900</td>
-                </tr>
-                <tr class="bg-blue-100 font-bold">
-                  <td colspan="4" class="px-10 py-5">Final Total (with charges):</td>
-                  <td class="px-10 py-5">৳27,225</td>
-                </tr>
-              </tfoot>
-            </table>
+          <div>
+            <h3 class="text-xl font-medium pt-3">Daily Pricing Details</h3>
+            <div class="overflow-x-auto mt-4 rounded-lg">
+              <table class="min-w-full text-sm text-left">
+                <thead class="bg-gray-800 text-white rounded-2xl">
+                  <tr>
+                    <th class="px-10 py-6">Date</th>
+                    <th class="px-10 py-6">Day</th>
+                    <th class="px-10 py-6">Base Price</th>
+                    <th class="px-10 py-6">Special Price</th>
+                    <th class="px-10 py-6">Savings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class=" odd:bg-gray-100 even:bg-white">
+                    <td class="px-10 py-5">2026-01-24</td>
+                    <td class="px-10 py-5 capitalize">Saturday</td>
+                    <td class="px-10 py-5">৳18,562.5</td>
+                    <td class="px-10 py-5 text-green-600 font-semibold">৳13,612.5</td>
+                    <td class="px-10 py-5 text-green-600 font-semibold">৳4,950</td>
+                  </tr>
+                  <tr class=" odd:bg-gray-100 even:bg-white">
+                    <td class="px-10 py-5">2026-01-25</td>
+                    <td class="px-10 py-5 capitalize">Sunday</td>
+                    <td class="px-10 py-5">৳18,562.5</td>
+                    <td class="px-10 py-5 text-green-600 font-semibold">৳13,612.5</td>
+                    <td class="px-10 py-5 text-green-600 font-semibold">৳4,950</td>
+                  </tr>
+                </tbody>
+                <tfoot class="bg-gray-100 font-semibold">
+                  <tr>
+                    <td colspan="2" class="px-10 py-5">Total for 2 nights:</td>
+                    <td class="px-10 py-5">৳37,125</td>
+                    <td class="px-10 py-5 text-green-600">৳27,225</td>
+                    <td class="px-10 py-5 text-green-600">৳9,900</td>
+                  </tr>
+                  <tr class="bg-blue-100 font-bold">
+                    <td colspan="4" class="px-10 py-5">Final Total (with charges):</td>
+                    <td class="px-10 py-5">৳27,225</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-medium pt-5">Cancel Policy</h3>
           </div>
         </div>
-        <div>
-          <h3 class="text-xl font-medium pt-5">Cancel Policy</h3>
+        <div class="flex justify-end mt-6 space-x-3 border-t border-black/15 pt-4 px-4">
+          <button type="button"
+            class="px-4 py-2 bg-gray-300 text-base leading-6 rounded-md transition-all hover:bg-gray-400 cursor-pointer">Close</button>
+          <button type="button"
+            class="px-4 py-2 bg-blue text-base leading-6 text-white rounded-md transition-all hover:bg-blue-900 cursor-pointer">Reserve</button>
         </div>
-      </div>
-      <div class="flex justify-end mt-6 space-x-3 border-t border-black/15 pt-4 px-4">
-        <button type="button" class="px-4 py-2 bg-gray-300 text-base leading-6 rounded-md transition-all hover:bg-gray-400 cursor-pointer">Close</button>
-        <button type="button"
-          class="px-4 py-2 bg-blue text-base leading-6 text-white rounded-md transition-all hover:bg-blue-900 cursor-pointer">Reserve</button>
       </div>
     </div>
   </div>
-</div>
   <!-- Filter section end -->
 
   <!-- Footer section start -->
@@ -979,35 +973,39 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./node_modules/preline/dist/preline.js"></script>
-  <!-- Include jQuery, Slick, and Slick Lightbox JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-lightbox@0.2.12/dist/slick-lightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
   <script type="module" src="/src/main.js"></script>
   <script>
-  const viewButtons = document.querySelectorAll(".viewButton");
-const viewCancels = document.querySelectorAll(".viewCancel");
-const closeButtons = document.querySelectorAll(".closeButton"); 
-const view = document.getElementById("view");
-
-viewButtons.forEach(btn => {
-btn.addEventListener("click", () => {
-view.classList.remove("hidden");
-});
-});
-
-closeButtons.forEach(btn => {
-btn.addEventListener("click", () => {
-view.classList.add("hidden");
-});
-});
-
-viewCancels.forEach(btn => {
-btn.addEventListener("click", () => {
-view.classList.remove("hidden");
-});
-});
+    Fancybox.bind("[data-fancybox='gallery']", {
+      Thumbs: false,
+      dragToClose: true
+    });
   </script>
+  <script>
+    const viewButtons = document.querySelectorAll(".viewButton");
+    const viewCancels = document.querySelectorAll(".viewCancel");
+    const closeButtons = document.querySelectorAll(".closeButton");
+    const view = document.getElementById("view");
+
+    viewButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        view.classList.remove("hidden");
+      });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        view.classList.add("hidden");
+      });
+    });
+
+    viewCancels.forEach(btn => {
+      btn.addEventListener("click", () => {
+        view.classList.remove("hidden");
+      });
+    });
+  </script>
+
 </body>
 
 </html>
