@@ -175,40 +175,63 @@ navigation: {
 
 // tab Button
 
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const tabButtons = document.querySelectorAll("#tab-btn-wrap button");
-    const tabItems   = document.querySelectorAll("#tab-item-wrap > div");
+  const tabButtons = document.querySelectorAll("#tab-btn-wrap button");
+  const tabItems   = document.querySelectorAll("#tab-item-wrap > div");
+  const menuLinks  = document.querySelectorAll(".menu-link");
 
-    // 🔹 Initial state → hide all
+  function activateTab(index) {
     tabItems.forEach(item => item.classList.add("hidden"));
+    tabButtons.forEach(btn => btn.classList.remove("text-blue"));
 
-    // 🔹 Default → first tab show
-    if (tabItems.length > 0) {
-      tabItems[0].classList.remove("hidden");
-      tabButtons[0].classList.add("text-blue");
+    if (tabItems[index] && tabButtons[index]) {
+      tabItems[index].classList.remove("hidden");
+      tabButtons[index].classList.add("text-blue");
     }
+  }
 
-    // 🔹 On click
-    tabButtons.forEach((btn, index) => {
-      btn.addEventListener("click", () => {
+  /* ===== Default ===== */
+  activateTab(0);
 
-        // hide all tabs
-        tabItems.forEach(item => item.classList.add("hidden"));
-
-        // remove active style
-        tabButtons.forEach(b =>
-          b.classList.remove("text-blue")
-        );
-
-        // show selected
-        tabItems[index].classList.remove("hidden");
-        btn.classList.add("text-blue");
-      });
+  /* ===== Tab button click ===== */
+  tabButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      activateTab(index);
+      history.replaceState(null, "", `#${btn.id}`);
     });
-
   });
 
+  /* ===== Header click (ONLY same page) ===== */
+  menuLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const index = Number(link.dataset.index);
+
+      // 👉 same page check
+      const isSamePage =
+        window.location.pathname.endsWith("index.html") ||
+        window.location.pathname === "/" ||
+        window.location.pathname === "";
+
+      if (isSamePage && !isNaN(index)) {
+        e.preventDefault(); // ✅ ONLY here
+        activateTab(index);
+        history.replaceState(null, "", `#${tabButtons[index].id}`);
+      }
+      // ❌ other page → browser will navigate normally
+    });
+  });
+
+  /* ===== Hash load (🔥 most important for other pages) ===== */
+  const hash = window.location.hash.replace("#", "");
+  if (hash) {
+    const index = [...tabButtons].findIndex(btn => btn.id === hash);
+    if (index !== -1) {
+      activateTab(index);
+    }
+  }
+
+});
 
   // Gueste input
 
